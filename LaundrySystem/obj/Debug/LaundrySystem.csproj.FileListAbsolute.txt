@@ -1,0 +1,11 @@
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\bin\Debug\LaundrySystem.exe.config
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\bin\Debug\LaundrySystem.exe
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\bin\Debug\LaundrySystem.pdb
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.csproj.AssemblyReference.cache
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.LoginForm.resources
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Properties.Resources.resources
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.csproj.GenerateResource.cache
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.exe
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.pdb
+C:\Users\student\source\repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.ServiceForm.resources
