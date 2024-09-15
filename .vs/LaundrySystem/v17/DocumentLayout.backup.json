@@ -37,7 +37,8 @@
               "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Customers.cs [Design]",
               "RelativeToolTip": "LaundrySystem\\Customers.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T08:06:56.456Z"
+              "WhenOpened": "2024-09-14T08:06:56.456Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -60,7 +61,8 @@
               "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\LoginForm.cs [Design]",
               "RelativeToolTip": "LaundrySystem\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T08:06:54.466Z"
+              "WhenOpened": "2024-09-14T08:06:54.466Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -71,7 +73,8 @@
               "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\ServiceForm.cs [Design]",
               "RelativeToolTip": "LaundrySystem\\ServiceForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T08:04:27.865Z"
+              "WhenOpened": "2024-09-14T08:04:27.865Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
