@@ -442,6 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 619);
             this.Controls.Add(this.PnlService);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ServiceForm";
             this.Text = "Laundry System";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

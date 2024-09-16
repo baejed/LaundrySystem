@@ -23,3 +23,5 @@ C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundryS.474C40ED.Up2Date
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.exe
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.pdb
+C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Customers.resources
+C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Laundries.resources
