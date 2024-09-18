@@ -1,22 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\",
+  "WorkspaceRootPath": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\laundries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\laundries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\formstaffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\formstaffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\source\\repos\\laundrysystem\\laundrysystem\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\serviceform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\serviceform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\downloads\\laundrysystem\\laundrysystem\\laundrysystem\\customers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +38,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServiceForm.cs",
-              "DocumentMoniker": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\ServiceForm.cs",
-              "RelativeDocumentMoniker": "LaundrySystem\\ServiceForm.cs",
-              "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\ServiceForm.cs",
-              "RelativeToolTip": "LaundrySystem\\ServiceForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Customers.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\Customers.Designer.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\Customers.Designer.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\Customers.Designer.cs",
+              "RelativeToolTip": "LaundrySystem\\Customers.Designer.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAACAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T15:24:30.368Z",
+              "WhenOpened": "2024-09-18T12:08:01.796Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customers.cs",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\Customers.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\Customers.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\Customers.cs",
+              "RelativeToolTip": "LaundrySystem\\Customers.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T12:07:44.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LaundrySystem\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T11:58:55.91Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ServiceForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\ServiceForm.Designer.cs",
-              "RelativeDocumentMoniker": "LaundrySystem\\ServiceForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\ServiceForm.Designer.cs",
-              "RelativeToolTip": "LaundrySystem\\ServiceForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GlobalProcedure.cs",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\GlobalProcedure.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\GlobalProcedure.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\GlobalProcedure.cs",
+              "RelativeToolTip": "LaundrySystem\\GlobalProcedure.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwB8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T15:24:24.679Z",
+              "WhenOpened": "2024-09-18T11:47:13.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Program.cs",
-              "RelativeDocumentMoniker": "LaundrySystem\\Program.cs",
-              "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Program.cs",
-              "RelativeToolTip": "LaundrySystem\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Customers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\Customers.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\Customers.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\Customers.cs [Design]",
+              "RelativeToolTip": "LaundrySystem\\Customers.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T15:23:28.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T11:38:41.194Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Laundries.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Laundries.cs",
-              "RelativeDocumentMoniker": "LaundrySystem\\Laundries.cs",
-              "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Laundries.cs [Design]",
-              "RelativeToolTip": "LaundrySystem\\Laundries.cs [Design]",
+              "Title": "FormStaffs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\FormStaffs.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\FormStaffs.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\FormStaffs.cs [Design]",
+              "RelativeToolTip": "LaundrySystem\\FormStaffs.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T08:06:55.478Z",
+              "WhenOpened": "2024-09-18T12:58:39.325Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\ServiceForm.cs",
+              "RelativeDocumentMoniker": "LaundrySystem\\ServiceForm.cs",
+              "ToolTip": "C:\\Users\\Bajed\\Downloads\\LaundrySystem\\LaundrySystem\\LaundrySystem\\ServiceForm.cs [Design]",
+              "RelativeToolTip": "LaundrySystem\\ServiceForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T11:38:32Z",
               "EditorCaption": " [Design]"
             }
           ]
