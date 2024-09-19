@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             this.PnlCustomers = new System.Windows.Forms.Panel();
-            this.DgvCustomers = new System.Windows.Forms.DataGridView();
+            this.BtnDelete = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnUpdate = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnSearch = new ReaLTaiizor.Controls.ParrotButton();
+            this.TbFullnameSearch = new System.Windows.Forms.TextBox();
+            this.GridCustomers = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +61,9 @@
             this.LblCustomerName = new System.Windows.Forms.Label();
             this.LblSearch = new System.Windows.Forms.Label();
             this.LblCustomerInfo = new System.Windows.Forms.Label();
-            this.BtnSearch = new ReaLTaiizor.Controls.ParrotButton();
-            this.BtnUpdate = new ReaLTaiizor.Controls.ParrotButton();
-            this.BtnDelete = new ReaLTaiizor.Controls.ParrotButton();
-            this.TbFullnameSearch = new System.Windows.Forms.TextBox();
+            this.LblTotalRecs = new System.Windows.Forms.Label();
             this.PnlCustomers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             this.PnlCustomers.Controls.Add(this.BtnUpdate);
             this.PnlCustomers.Controls.Add(this.BtnSearch);
             this.PnlCustomers.Controls.Add(this.TbFullnameSearch);
-            this.PnlCustomers.Controls.Add(this.DgvCustomers);
+            this.PnlCustomers.Controls.Add(this.GridCustomers);
             this.PnlCustomers.Controls.Add(this.CmbCustGender);
             this.PnlCustomers.Controls.Add(this.DtpBirthdate);
             this.PnlCustomers.Controls.Add(this.BtnAddCustomer);
@@ -91,6 +92,7 @@
             this.PnlCustomers.Controls.Add(this.LblAddress);
             this.PnlCustomers.Controls.Add(this.LblGender);
             this.PnlCustomers.Controls.Add(this.LblBirthDate);
+            this.PnlCustomers.Controls.Add(this.LblTotalRecs);
             this.PnlCustomers.Controls.Add(this.LblFullNameSearch);
             this.PnlCustomers.Controls.Add(this.LblCustomerName);
             this.PnlCustomers.Controls.Add(this.LblSearch);
@@ -101,14 +103,100 @@
             this.PnlCustomers.Size = new System.Drawing.Size(1205, 624);
             this.PnlCustomers.TabIndex = 0;
             // 
-            // DgvCustomers
+            // BtnDelete
             // 
-            this.DgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDelete.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnDelete.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnDelete.ButtonImage")));
+            this.BtnDelete.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnDelete.ButtonText = "Delete";
+            this.BtnDelete.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnDelete.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnDelete.CornerRadius = 5;
+            this.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDelete.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnDelete.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnDelete.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnDelete.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnDelete.Location = new System.Drawing.Point(785, 589);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(131, 30);
+            this.BtnDelete.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnDelete.TabIndex = 13;
+            this.BtnDelete.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnDelete.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnDelete.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnUpdate.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnUpdate.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ButtonImage")));
+            this.BtnUpdate.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnUpdate.ButtonText = "Update";
+            this.BtnUpdate.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnUpdate.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnUpdate.CornerRadius = 5;
+            this.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdate.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnUpdate.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnUpdate.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnUpdate.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnUpdate.Location = new System.Drawing.Point(922, 589);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(131, 30);
+            this.BtnUpdate.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnUpdate.TabIndex = 12;
+            this.BtnUpdate.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnUpdate.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnUpdate.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSearch.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnSearch.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnSearch.ButtonImage")));
+            this.BtnSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnSearch.ButtonText = "Search";
+            this.BtnSearch.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnSearch.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnSearch.CornerRadius = 5;
+            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSearch.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnSearch.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnSearch.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnSearch.Location = new System.Drawing.Point(1059, 589);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(131, 30);
+            this.BtnSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnSearch.TabIndex = 11;
+            this.BtnSearch.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnSearch.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // TbFullnameSearch
+            // 
+            this.TbFullnameSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TbFullnameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbFullnameSearch.Location = new System.Drawing.Point(433, 70);
+            this.TbFullnameSearch.Name = "TbFullnameSearch";
+            this.TbFullnameSearch.Size = new System.Drawing.Size(757, 31);
+            this.TbFullnameSearch.TabIndex = 9;
+            this.TbFullnameSearch.TextChanged += new System.EventHandler(this.TbFullnameSearch_TextChanged);
+            // 
+            // GridCustomers
+            // 
+            this.GridCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Fullname,
             this.Birthdate,
@@ -117,12 +205,12 @@
             this.ContactNum,
             this.EmailAddress,
             this.ImageLoc});
-            this.DgvCustomers.Location = new System.Drawing.Point(433, 106);
-            this.DgvCustomers.Margin = new System.Windows.Forms.Padding(5);
-            this.DgvCustomers.Name = "DgvCustomers";
-            this.DgvCustomers.RowHeadersVisible = false;
-            this.DgvCustomers.Size = new System.Drawing.Size(757, 475);
-            this.DgvCustomers.TabIndex = 14;
+            this.GridCustomers.Location = new System.Drawing.Point(433, 106);
+            this.GridCustomers.Margin = new System.Windows.Forms.Padding(5);
+            this.GridCustomers.Name = "GridCustomers";
+            this.GridCustomers.RowHeadersVisible = false;
+            this.GridCustomers.Size = new System.Drawing.Size(757, 475);
+            this.GridCustomers.TabIndex = 10;
             // 
             // ID
             // 
@@ -182,7 +270,7 @@
             this.CmbCustGender.Location = new System.Drawing.Point(16, 180);
             this.CmbCustGender.Name = "CmbCustGender";
             this.CmbCustGender.Size = new System.Drawing.Size(179, 24);
-            this.CmbCustGender.TabIndex = 13;
+            this.CmbCustGender.TabIndex = 3;
             this.CmbCustGender.SelectedIndexChanged += new System.EventHandler(this.CmbCustGender_SelectedIndexChanged);
             // 
             // DtpBirthdate
@@ -191,7 +279,7 @@
             this.DtpBirthdate.Location = new System.Drawing.Point(16, 125);
             this.DtpBirthdate.Name = "DtpBirthdate";
             this.DtpBirthdate.Size = new System.Drawing.Size(179, 20);
-            this.DtpBirthdate.TabIndex = 12;
+            this.DtpBirthdate.TabIndex = 2;
             this.DtpBirthdate.ValueChanged += new System.EventHandler(this.DtpBirthdate_ValueChanged);
             // 
             // BtnAddCustomer
@@ -213,7 +301,7 @@
             this.BtnAddCustomer.Name = "BtnAddCustomer";
             this.BtnAddCustomer.Size = new System.Drawing.Size(179, 35);
             this.BtnAddCustomer.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnAddCustomer.TabIndex = 11;
+            this.BtnAddCustomer.TabIndex = 8;
             this.BtnAddCustomer.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnAddCustomer.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnAddCustomer.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -238,7 +326,7 @@
             this.BtnUpload.Name = "BtnUpload";
             this.BtnUpload.Size = new System.Drawing.Size(64, 23);
             this.BtnUpload.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnUpload.TabIndex = 10;
+            this.BtnUpload.TabIndex = 7;
             this.BtnUpload.TextColor = System.Drawing.Color.Black;
             this.BtnUpload.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnUpload.Vertical_Alignment = System.Drawing.StringAlignment.Center;
@@ -271,7 +359,7 @@
             this.TbContactNum.Location = new System.Drawing.Point(16, 290);
             this.TbContactNum.Name = "TbContactNum";
             this.TbContactNum.Size = new System.Drawing.Size(179, 23);
-            this.TbContactNum.TabIndex = 6;
+            this.TbContactNum.TabIndex = 5;
             this.TbContactNum.TextChanged += new System.EventHandler(this.TbContactNum_TextChanged);
             // 
             // TbAddress
@@ -280,7 +368,7 @@
             this.TbAddress.Location = new System.Drawing.Point(16, 235);
             this.TbAddress.Name = "TbAddress";
             this.TbAddress.Size = new System.Drawing.Size(179, 23);
-            this.TbAddress.TabIndex = 6;
+            this.TbAddress.TabIndex = 4;
             this.TbAddress.TextChanged += new System.EventHandler(this.TbAddress_TextChanged);
             // 
             // TbCustomerName
@@ -289,7 +377,7 @@
             this.TbCustomerName.Location = new System.Drawing.Point(16, 70);
             this.TbCustomerName.Name = "TbCustomerName";
             this.TbCustomerName.Size = new System.Drawing.Size(179, 23);
-            this.TbCustomerName.TabIndex = 6;
+            this.TbCustomerName.TabIndex = 1;
             this.TbCustomerName.TextChanged += new System.EventHandler(this.TbCustomerName_TextChanged);
             // 
             // LblEmailAd
@@ -398,90 +486,17 @@
             this.LblCustomerInfo.TabIndex = 8;
             this.LblCustomerInfo.Text = "Customer Info (New Customer)";
             // 
-            // BtnSearch
+            // LblTotalRecs
             // 
-            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSearch.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnSearch.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnSearch.ButtonImage")));
-            this.BtnSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnSearch.ButtonText = "Search";
-            this.BtnSearch.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnSearch.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.CornerRadius = 5;
-            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSearch.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnSearch.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnSearch.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnSearch.Location = new System.Drawing.Point(1059, 589);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(131, 30);
-            this.BtnSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnSearch.TabIndex = 16;
-            this.BtnSearch.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnSearch.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnUpdate.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnUpdate.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ButtonImage")));
-            this.BtnUpdate.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnUpdate.ButtonText = "Update";
-            this.BtnUpdate.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnUpdate.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnUpdate.CornerRadius = 5;
-            this.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUpdate.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnUpdate.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnUpdate.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnUpdate.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnUpdate.Location = new System.Drawing.Point(922, 589);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(131, 30);
-            this.BtnUpdate.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnUpdate.TabIndex = 16;
-            this.BtnUpdate.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnUpdate.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnUpdate.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDelete.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnDelete.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnDelete.ButtonImage")));
-            this.BtnDelete.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnDelete.ButtonText = "Delete";
-            this.BtnDelete.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnDelete.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnDelete.CornerRadius = 5;
-            this.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnDelete.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnDelete.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnDelete.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnDelete.Location = new System.Drawing.Point(785, 589);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(131, 30);
-            this.BtnDelete.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnDelete.TabIndex = 16;
-            this.BtnDelete.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnDelete.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnDelete.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // TbFullnameSearch
-            // 
-            this.TbFullnameSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbFullnameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbFullnameSearch.Location = new System.Drawing.Point(433, 70);
-            this.TbFullnameSearch.Name = "TbFullnameSearch";
-            this.TbFullnameSearch.Size = new System.Drawing.Size(757, 31);
-            this.TbFullnameSearch.TabIndex = 15;
+            this.LblTotalRecs.AutoSize = true;
+            this.LblTotalRecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalRecs.ForeColor = System.Drawing.Color.White;
+            this.LblTotalRecs.Location = new System.Drawing.Point(430, 589);
+            this.LblTotalRecs.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
+            this.LblTotalRecs.Name = "LblTotalRecs";
+            this.LblTotalRecs.Size = new System.Drawing.Size(96, 16);
+            this.LblTotalRecs.TabIndex = 7;
+            this.LblTotalRecs.Text = "Total Records:";
             // 
             // Customers
             // 
@@ -493,7 +508,7 @@
             this.Text = "Customers";
             this.PnlCustomers.ResumeLayout(false);
             this.PnlCustomers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).EndInit();
             this.ResumeLayout(false);
 
@@ -518,7 +533,7 @@
         private System.Windows.Forms.Label LblContactNo;
         private System.Windows.Forms.DateTimePicker DtpBirthdate;
         private System.Windows.Forms.ComboBox CmbCustGender;
-        private System.Windows.Forms.DataGridView DgvCustomers;
+        private System.Windows.Forms.DataGridView GridCustomers;
         private System.Windows.Forms.Label LblFullNameSearch;
         private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -533,5 +548,6 @@
         private ReaLTaiizor.Controls.ParrotButton BtnDelete;
         private ReaLTaiizor.Controls.ParrotButton BtnUpdate;
         private System.Windows.Forms.TextBox TbFullnameSearch;
+        private System.Windows.Forms.Label LblTotalRecs;
     }
 }

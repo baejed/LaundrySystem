@@ -26,11 +26,15 @@ namespace LaundrySystem
         string v_emailadd = "";
         string v_customerPhoto = "";
 
+        string v_fullnameSearch = "";
+
         public Customers()
         {
             InitializeComponent();
             if(!this.globalProcedure.fncConnectToDatabase())
                 MessageBox.Show("Not Connected");
+
+            DisplayAllCustomer();
 
         }
 
@@ -83,6 +87,7 @@ namespace LaundrySystem
                 sqlCmd.Parameters.AddWithValue("@p_cust_photo", v_customerPhoto);
                 sqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Customer saved successfully");
+                DisplayAllCustomer();
             }
             catch (Exception ex)
             {
@@ -100,6 +105,123 @@ namespace LaundrySystem
                 this.PicCustomer.Image = new Bitmap(ofdPic.FileName);
                 this.v_customerPhoto = ofdPic.FileName;
             }
+        }
+
+        public void DisplayAllCustomer()
+        {
+            try
+            {
+                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
+
+                this.globalProcedure.sqlLaundryAdapter = new MySqlDataAdapter();
+                this.globalProcedure.datLaundry = new DataTable();
+
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procDisplayAllCustomer";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                this.globalProcedure.sqlLaundryAdapter.SelectCommand = this.globalProcedure.sqlCommand;
+                this.globalProcedure.datLaundry.Clear();
+                this.globalProcedure.sqlLaundryAdapter.Fill(this.globalProcedure.datLaundry);
+
+                if (globalProcedure.datLaundry.Rows.Count > 0)
+                {
+                    DataTable dataTable = globalProcedure.datLaundry;
+                    int row = 0;
+                    int totalRecords = globalProcedure.datLaundry.Rows.Count;
+                    this.LblTotalRecs.Text = totalRecords.ToString();
+                    this.GridCustomers.RowCount = totalRecords;
+
+                    while(!(totalRecords-1 < row))
+                    {
+                        this.GridCustomers.Rows[row].Cells[0].Value = dataTable.Rows[row]["id"].ToString();
+                        this.GridCustomers.Rows[row].Cells[1].Value = dataTable.Rows[row]["fullname"].ToString();
+                        this.GridCustomers.Rows[row].Cells[2].Value = dataTable.Rows[row]["birthdate"].ToString();
+                        this.GridCustomers.Rows[row].Cells[3].Value = dataTable.Rows[row]["gender"].ToString();
+                        this.GridCustomers.Rows[row].Cells[4].Value = dataTable.Rows[row]["address"].ToString();
+                        this.GridCustomers.Rows[row].Cells[5].Value = dataTable.Rows[row]["contactno"].ToString();
+                        this.GridCustomers.Rows[row].Cells[6].Value = dataTable.Rows[row]["emailadd"].ToString();
+                        this.GridCustomers.Rows[row].Cells[7].Value = dataTable.Rows[row]["cust_photo"].ToString();
+                        row++;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Record not found!");
+                }
+
+                this.globalProcedure.sqlLaundryAdapter.Dispose();
+                this.globalProcedure.datLaundry.Dispose();
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void SearchAndDisplayAllCustomer(string p_fullname)
+        {
+            try
+            {
+                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
+
+                this.globalProcedure.sqlLaundryAdapter = new MySqlDataAdapter();
+                this.globalProcedure.datLaundry = new DataTable();
+
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procSearchCustomerByFullname";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                gProcCmd.Parameters.AddWithValue("@p_fullname", p_fullname);
+                this.globalProcedure.sqlLaundryAdapter.SelectCommand = this.globalProcedure.sqlCommand;
+                this.globalProcedure.datLaundry.Clear();
+                this.globalProcedure.sqlLaundryAdapter.Fill(this.globalProcedure.datLaundry);
+
+                if (globalProcedure.datLaundry.Rows.Count > 0)
+                {
+                    DataTable dataTable = globalProcedure.datLaundry;
+                    int row = 0;
+                    int totalRecords = globalProcedure.datLaundry.Rows.Count;
+                    this.LblTotalRecs.Text = totalRecords.ToString();
+                    this.GridCustomers.RowCount = totalRecords;
+
+                    while (!(totalRecords - 1 < row))
+                    {
+                        this.GridCustomers.Rows[row].Cells[0].Value = dataTable.Rows[row]["id"].ToString();
+                        this.GridCustomers.Rows[row].Cells[1].Value = dataTable.Rows[row]["fullname"].ToString();
+                        this.GridCustomers.Rows[row].Cells[2].Value = dataTable.Rows[row]["birthdate"].ToString();
+                        this.GridCustomers.Rows[row].Cells[3].Value = dataTable.Rows[row]["gender"].ToString();
+                        this.GridCustomers.Rows[row].Cells[4].Value = dataTable.Rows[row]["address"].ToString();
+                        this.GridCustomers.Rows[row].Cells[5].Value = dataTable.Rows[row]["contactno"].ToString();
+                        this.GridCustomers.Rows[row].Cells[6].Value = dataTable.Rows[row]["emailadd"].ToString();
+                        this.GridCustomers.Rows[row].Cells[7].Value = dataTable.Rows[row]["cust_photo"].ToString();
+                        row++;
+                    }
+
+                }
+                else
+                {
+                    this.GridCustomers.Rows.Clear();
+                    //MessageBox.Show("Record not found!");
+                }
+
+                this.globalProcedure.sqlLaundryAdapter.Dispose();
+                this.globalProcedure.datLaundry.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void TbFullnameSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.v_fullnameSearch = this.TbFullnameSearch.Text;
+
+            if (this.v_fullnameSearch == String.Empty)
+                DisplayAllCustomer();
+            else
+                SearchAndDisplayAllCustomer(this.v_fullnameSearch);
         }
     }
 }

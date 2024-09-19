@@ -22,6 +22,10 @@ namespace LaundrySystem
         public MySqlCommand sqlCommand;
         public string strConnection;
 
+        // packages and classes
+        public MySqlDataAdapter sqlLaundryAdapter;
+        public DataTable datLaundry;
+
         public bool fncConnectToDatabase()
         {
             try
