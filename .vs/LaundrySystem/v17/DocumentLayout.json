@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\source\\repos\\laundrysystem\\laundrysystem\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\globalprocedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|c:\\users\\bajed\\source\\repos\\laundrysystem\\laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C95A5566-A328-4E49-8895-20E1BF8A93C3}|LaundrySystem\\LaundrySystem.csproj|solutionrelative:laundrysystem\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Customers.cs",
               "DocumentMoniker": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Customers.cs",
               "RelativeDocumentMoniker": "LaundrySystem\\Customers.cs",
               "ToolTip": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Customers.cs",
               "RelativeToolTip": "LaundrySystem\\Customers.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAuwMoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAANYAAAAAAAAAAAAswOIAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T14:26:28.578Z",
               "EditorCaption": ""
@@ -52,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Customers.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Bajed\\source\\repos\\LaundrySystem\\LaundrySystem\\Customers.cs",
               "RelativeDocumentMoniker": "LaundrySystem\\Customers.cs",

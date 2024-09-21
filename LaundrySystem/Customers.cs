@@ -18,8 +18,10 @@ namespace LaundrySystem
 
         GlobalProcedure globalProcedure = new GlobalProcedure();
 
+        bool update = false;
+
         string v_fullName = "";
-        DateTime v_bdate;
+        DateTime v_bdate = DateTime.Now;
         string v_gender = "";
         string v_address = "";
         string v_contactNumber = "";
@@ -35,6 +37,7 @@ namespace LaundrySystem
                 MessageBox.Show("Not Connected");
 
             DisplayAllCustomer();
+            this.GridCustomers.Rows[0].Selected = false;
 
         }
 
@@ -128,7 +131,7 @@ namespace LaundrySystem
                     DataTable dataTable = globalProcedure.datLaundry;
                     int row = 0;
                     int totalRecords = globalProcedure.datLaundry.Rows.Count;
-                    this.LblTotalRecs.Text = totalRecords.ToString();
+                    this.LblTotalRecs.Text = "Total Records: " + totalRecords.ToString();
                     this.GridCustomers.RowCount = totalRecords;
 
                     while(!(totalRecords-1 < row))
@@ -181,7 +184,7 @@ namespace LaundrySystem
                     DataTable dataTable = globalProcedure.datLaundry;
                     int row = 0;
                     int totalRecords = globalProcedure.datLaundry.Rows.Count;
-                    this.LblTotalRecs.Text = totalRecords.ToString();
+                    this.LblTotalRecs.Text = "Total Records: " + totalRecords.ToString();
                     this.GridCustomers.RowCount = totalRecords;
 
                     while (!(totalRecords - 1 < row))
@@ -222,6 +225,31 @@ namespace LaundrySystem
                 DisplayAllCustomer();
             else
                 SearchAndDisplayAllCustomer(this.v_fullnameSearch);
+        }
+
+        private void GridCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedIdx = e.RowIndex;
+
+            if (selectedIdx < 0) return;
+
+            string customerId = this.GridCustomers.Rows[selectedIdx].Cells[0].Value.ToString();
+            DisplayCustomerDetails(selectedIdx);
+
+            this.LblCustomerInfo.Text = "Customer Info (" + "Cusomter ID: " + customerId + ")";
+        }
+
+        private void DisplayCustomerDetails(int index)
+        {
+            DataGridViewCellCollection details =  this.GridCustomers.Rows[index].Cells;
+
+            this.TbCustomerName.Text = details[1].Value.ToString();
+            this.DtpBirthdate.Value = DateTime.Parse(details[2].Value.ToString());
+            this.CmbCustGender.Text = details[3].Value.ToString();
+            this.TbAddress.Text = details[4].Value.ToString();
+            this.TbContactNum.Text = details[5].Value.ToString();
+            this.TbEmailAdd.Text = details[6].Value.ToString();
+            this.PicCustomer.Image = new Bitmap(details[7].Value.ToString());
         }
     }
 }

@@ -57,11 +57,11 @@
             this.LblAddress = new System.Windows.Forms.Label();
             this.LblGender = new System.Windows.Forms.Label();
             this.LblBirthDate = new System.Windows.Forms.Label();
+            this.LblTotalRecs = new System.Windows.Forms.Label();
             this.LblFullNameSearch = new System.Windows.Forms.Label();
             this.LblCustomerName = new System.Windows.Forms.Label();
             this.LblSearch = new System.Windows.Forms.Label();
             this.LblCustomerInfo = new System.Windows.Forms.Label();
-            this.LblTotalRecs = new System.Windows.Forms.Label();
             this.PnlCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).BeginInit();
@@ -191,6 +191,10 @@
             // 
             // GridCustomers
             // 
+            this.GridCustomers.AllowUserToAddRows = false;
+            this.GridCustomers.AllowUserToDeleteRows = false;
+            this.GridCustomers.AllowUserToOrderColumns = true;
+            this.GridCustomers.AllowUserToResizeRows = false;
             this.GridCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -207,10 +211,15 @@
             this.ImageLoc});
             this.GridCustomers.Location = new System.Drawing.Point(433, 106);
             this.GridCustomers.Margin = new System.Windows.Forms.Padding(5);
+            this.GridCustomers.MultiSelect = false;
             this.GridCustomers.Name = "GridCustomers";
+            this.GridCustomers.ReadOnly = true;
             this.GridCustomers.RowHeadersVisible = false;
+            this.GridCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.GridCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridCustomers.Size = new System.Drawing.Size(757, 475);
             this.GridCustomers.TabIndex = 10;
+            this.GridCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCustomers_CellClick);
             // 
             // ID
             // 
@@ -440,6 +449,18 @@
             this.LblBirthDate.TabIndex = 7;
             this.LblBirthDate.Text = "Birthdate";
             // 
+            // LblTotalRecs
+            // 
+            this.LblTotalRecs.AutoSize = true;
+            this.LblTotalRecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalRecs.ForeColor = System.Drawing.Color.White;
+            this.LblTotalRecs.Location = new System.Drawing.Point(430, 589);
+            this.LblTotalRecs.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
+            this.LblTotalRecs.Name = "LblTotalRecs";
+            this.LblTotalRecs.Size = new System.Drawing.Size(96, 16);
+            this.LblTotalRecs.TabIndex = 7;
+            this.LblTotalRecs.Text = "Total Records:";
+            // 
             // LblFullNameSearch
             // 
             this.LblFullNameSearch.AutoSize = true;
@@ -485,18 +506,6 @@
             this.LblCustomerInfo.Size = new System.Drawing.Size(390, 31);
             this.LblCustomerInfo.TabIndex = 8;
             this.LblCustomerInfo.Text = "Customer Info (New Customer)";
-            // 
-            // LblTotalRecs
-            // 
-            this.LblTotalRecs.AutoSize = true;
-            this.LblTotalRecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalRecs.ForeColor = System.Drawing.Color.White;
-            this.LblTotalRecs.Location = new System.Drawing.Point(430, 589);
-            this.LblTotalRecs.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
-            this.LblTotalRecs.Name = "LblTotalRecs";
-            this.LblTotalRecs.Size = new System.Drawing.Size(96, 16);
-            this.LblTotalRecs.TabIndex = 7;
-            this.LblTotalRecs.Text = "Total Records:";
             // 
             // Customers
             // 
