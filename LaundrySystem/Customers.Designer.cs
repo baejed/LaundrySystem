@@ -20,6 +20,8 @@
             base.Dispose(disposing);
         }
 
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -31,6 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             this.PnlCustomers = new System.Windows.Forms.Panel();
             this.BtnDelete = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnCancel = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnUpdate = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnSearch = new ReaLTaiizor.Controls.ParrotButton();
             this.TbFullnameSearch = new System.Windows.Forms.TextBox();
@@ -74,6 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlCustomers.BackColor = System.Drawing.Color.DodgerBlue;
             this.PnlCustomers.Controls.Add(this.BtnDelete);
+            this.PnlCustomers.Controls.Add(this.BtnCancel);
             this.PnlCustomers.Controls.Add(this.BtnUpdate);
             this.PnlCustomers.Controls.Add(this.BtnSearch);
             this.PnlCustomers.Controls.Add(this.TbFullnameSearch);
@@ -114,19 +118,47 @@
             this.BtnDelete.ClickTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnDelete.CornerRadius = 5;
             this.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDelete.Enabled = false;
             this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDelete.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
             this.BtnDelete.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnDelete.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnDelete.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnDelete.Location = new System.Drawing.Point(785, 589);
+            this.BtnDelete.Location = new System.Drawing.Point(16, 475);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(131, 30);
+            this.BtnDelete.Size = new System.Drawing.Size(179, 35);
             this.BtnDelete.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.BtnDelete.TabIndex = 13;
             this.BtnDelete.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnDelete.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnDelete.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCancel.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnCancel.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ButtonImage")));
+            this.BtnCancel.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnCancel.ButtonText = "Cancel";
+            this.BtnCancel.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnCancel.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCancel.CornerRadius = 5;
+            this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnCancel.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnCancel.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCancel.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnCancel.Location = new System.Drawing.Point(16, 516);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(179, 35);
+            this.BtnCancel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnCancel.TabIndex = 12;
+            this.BtnCancel.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCancel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnCancel.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnUpdate
             // 
@@ -139,19 +171,21 @@
             this.BtnUpdate.ClickTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnUpdate.CornerRadius = 5;
             this.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUpdate.Enabled = false;
             this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUpdate.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
             this.BtnUpdate.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnUpdate.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnUpdate.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnUpdate.Location = new System.Drawing.Point(922, 589);
+            this.BtnUpdate.Location = new System.Drawing.Point(16, 434);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(131, 30);
+            this.BtnUpdate.Size = new System.Drawing.Size(179, 35);
             this.BtnUpdate.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.BtnUpdate.TabIndex = 12;
             this.BtnUpdate.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnUpdate.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnUpdate.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnSearch
             // 
@@ -226,48 +260,56 @@
             this.ID.FillWeight = 36.93885F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // Fullname
             // 
             this.Fullname.FillWeight = 82.20373F;
             this.Fullname.HeaderText = "Fullname";
             this.Fullname.Name = "Fullname";
+            this.Fullname.ReadOnly = true;
             // 
             // Birthdate
             // 
             this.Birthdate.FillWeight = 78.38728F;
             this.Birthdate.HeaderText = "Birthdate";
             this.Birthdate.Name = "Birthdate";
+            this.Birthdate.ReadOnly = true;
             // 
             // Gender
             // 
             this.Gender.FillWeight = 56.67597F;
             this.Gender.HeaderText = "Gender";
             this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
             // 
             // Address
             // 
             this.Address.FillWeight = 116.8864F;
             this.Address.HeaderText = "Address";
             this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // ContactNum
             // 
             this.ContactNum.FillWeight = 101.5229F;
             this.ContactNum.HeaderText = "Contact Number";
             this.ContactNum.Name = "ContactNum";
+            this.ContactNum.ReadOnly = true;
             // 
             // EmailAddress
             // 
             this.EmailAddress.FillWeight = 147.2571F;
             this.EmailAddress.HeaderText = "EmailAddress";
             this.EmailAddress.Name = "EmailAddress";
+            this.EmailAddress.ReadOnly = true;
             // 
             // ImageLoc
             // 
             this.ImageLoc.FillWeight = 180.1279F;
             this.ImageLoc.HeaderText = "Image Location";
             this.ImageLoc.Name = "ImageLoc";
+            this.ImageLoc.ReadOnly = true;
             // 
             // CmbCustGender
             // 
@@ -558,5 +600,13 @@
         private ReaLTaiizor.Controls.ParrotButton BtnUpdate;
         private System.Windows.Forms.TextBox TbFullnameSearch;
         private System.Windows.Forms.Label LblTotalRecs;
+
+        private void ClearCustomerPic()
+        {
+            this.PicCustomer.Image = ((System.Drawing.Image)(resources.GetObject("PicCustomer.Image")));
+            //this.PicCustomer.Image =
+        }
+
+        private ReaLTaiizor.Controls.ParrotButton BtnCancel;
     }
 }

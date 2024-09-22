@@ -1,12 +1,15 @@
-﻿using MySql.Data.MySqlClient;
+﻿using LaundrySystem.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +19,13 @@ namespace LaundrySystem
     public partial class Customers : Form
     {
 
+        Color disabledColor = Color.FromArgb(135, 190, 245);
+
         GlobalProcedure globalProcedure = new GlobalProcedure();
 
-        bool update = false;
+        bool editing = false;
+
+        int v_selectedId = -1;
 
         string v_fullName = "";
         DateTime v_bdate = DateTime.Now;
@@ -37,7 +44,7 @@ namespace LaundrySystem
                 MessageBox.Show("Not Connected");
 
             DisplayAllCustomer();
-            this.GridCustomers.Rows[0].Selected = false;
+            this.Editing = false;
 
         }
 
@@ -74,28 +81,30 @@ namespace LaundrySystem
 
         private void BtnAddCustomer_Click(object sender, EventArgs e)
         {
-            MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
+            MySqlCommand gProcCmd = this.globalProcedure.sqlCommand;
 
             try
             {
-                sqlCmd.Parameters.Clear();
-                sqlCmd.CommandText = "procAddCustomer";
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddWithValue("@p_fullname", v_fullName);
-                sqlCmd.Parameters.AddWithValue("@p_birthdate", v_bdate);
-                sqlCmd.Parameters.AddWithValue("@p_gender", v_gender);
-                sqlCmd.Parameters.AddWithValue("@p_address", v_address);
-                sqlCmd.Parameters.AddWithValue("@p_contactno", v_contactNumber);
-                sqlCmd.Parameters.AddWithValue("@p_emailadd", v_emailadd);
-                sqlCmd.Parameters.AddWithValue("@p_cust_photo", v_customerPhoto);
-                sqlCmd.ExecuteNonQuery();
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procAddCustomer";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                gProcCmd.Parameters.AddWithValue("@p_fullname", v_fullName);
+                gProcCmd.Parameters.AddWithValue("@p_birthdate", v_bdate);
+                gProcCmd.Parameters.AddWithValue("@p_gender", v_gender);
+                gProcCmd.Parameters.AddWithValue("@p_address", v_address);
+                gProcCmd.Parameters.AddWithValue("@p_contactno", v_contactNumber);
+                gProcCmd.Parameters.AddWithValue("@p_emailadd", v_emailadd);
+                gProcCmd.Parameters.AddWithValue("@p_cust_photo", v_customerPhoto);
+                gProcCmd.ExecuteNonQuery();
                 MessageBox.Show("Customer saved successfully");
-                DisplayAllCustomer();
+                SearchAndDisplayAllCustomer(v_fullnameSearch);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Add failed");
             }
+
+            ClearCustomerDetails();
 
         }
 
@@ -236,7 +245,11 @@ namespace LaundrySystem
             string customerId = this.GridCustomers.Rows[selectedIdx].Cells[0].Value.ToString();
             DisplayCustomerDetails(selectedIdx);
 
+            this.v_selectedId = int.Parse(customerId);
+
             this.LblCustomerInfo.Text = "Customer Info (" + "Cusomter ID: " + customerId + ")";
+
+            this.Editing = true;
         }
 
         private void DisplayCustomerDetails(int index)
@@ -249,7 +262,109 @@ namespace LaundrySystem
             this.TbAddress.Text = details[4].Value.ToString();
             this.TbContactNum.Text = details[5].Value.ToString();
             this.TbEmailAdd.Text = details[6].Value.ToString();
-            this.PicCustomer.Image = new Bitmap(details[7].Value.ToString());
+            this.v_customerPhoto = details[7].Value.ToString();
+
+            try
+            {
+                this.PicCustomer.Image = new Bitmap(this.v_customerPhoto);
+
+            }catch(Exception ex)
+            {
+                this.ClearCustomerPic();
+            }
+        }
+
+        private void ClearCustomerDetails()
+        {
+            //DataGridViewCellCollection details = this.GridCustomers.Rows[index].Cells;
+
+            this.TbCustomerName.Text = "";
+            this.DtpBirthdate.Value = DateTime.Now;
+            this.CmbCustGender.Text = "";
+            this.TbAddress.Text = "";
+            this.TbContactNum.Text = "";
+            this.TbEmailAdd.Text = "";
+            this.ClearCustomerPic();
+            this.LblCustomerInfo.Text = "Customer Info (New Customer)";
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
+
+                this.globalProcedure.sqlLaundryAdapter = new MySqlDataAdapter();
+
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procDeleteCustomerById";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                gProcCmd.Parameters.AddWithValue("@p_id", v_selectedId);
+                gProcCmd.ExecuteNonQuery();
+
+                MessageBox.Show("User ID: " + this.v_selectedId + " deleted");
+                this.v_selectedId = -1;
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Delete failedd");
+            }
+
+            SearchAndDisplayAllCustomer(v_fullnameSearch);
+            ClearCustomerDetails();
+
+        }
+
+        bool Editing { set { 
+                this.editing = value;
+                this.BtnUpdate.Enabled = value;
+                this.BtnDelete.Enabled = value;
+                this.BtnCancel.Enabled = value;
+                this.BtnAddCustomer.Enabled = !value;
+
+                this.BtnUpdate.BackgroundColor = value ? Color.Black : disabledColor;
+                this.BtnDelete.BackgroundColor = value ? Color.Black : disabledColor;
+                this.BtnCancel.BackgroundColor = value ? Color.Black : disabledColor;
+                this.BtnAddCustomer.BackgroundColor = value ? disabledColor : Color.Black;
+
+            }
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Editing = false;
+            ClearCustomerDetails();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            MySqlCommand gProcCmd = this.globalProcedure.sqlCommand;
+
+            try
+            {
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procUpdateCustomerById";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                gProcCmd.Parameters.AddWithValue("@p_id", v_selectedId);
+                gProcCmd.Parameters.AddWithValue("@p_fullname", v_fullName);
+                gProcCmd.Parameters.AddWithValue("@p_birthdate", v_bdate);
+                gProcCmd.Parameters.AddWithValue("@p_gender", v_gender);
+                gProcCmd.Parameters.AddWithValue("@p_address", v_address);
+                gProcCmd.Parameters.AddWithValue("@p_contactno", v_contactNumber);
+                gProcCmd.Parameters.AddWithValue("@p_emailadd", v_emailadd);
+                gProcCmd.Parameters.AddWithValue("@p_cust_photo", v_customerPhoto);
+                gProcCmd.ExecuteNonQuery();
+
+                MessageBox.Show("Customer updated successfully");
+                SearchAndDisplayAllCustomer(v_fullnameSearch);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            ClearCustomerDetails();
+            Editing = false;
         }
     }
 }
