@@ -147,3 +147,4 @@ C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\System.Runtime
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormDashboard.resources
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormStaffs.resources
+C:\Users\student\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormStaffs.resources

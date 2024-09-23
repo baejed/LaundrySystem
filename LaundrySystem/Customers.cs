@@ -147,7 +147,7 @@ namespace LaundrySystem
                     {
                         this.GridCustomers.Rows[row].Cells[0].Value = dataTable.Rows[row]["id"].ToString();
                         this.GridCustomers.Rows[row].Cells[1].Value = dataTable.Rows[row]["fullname"].ToString();
-                        this.GridCustomers.Rows[row].Cells[2].Value = dataTable.Rows[row]["birthdate"].ToString();
+                        this.GridCustomers.Rows[row].Cells[2].Value = DateTime.Parse(dataTable.Rows[row]["birthdate"].ToString()).Date;
                         this.GridCustomers.Rows[row].Cells[3].Value = dataTable.Rows[row]["gender"].ToString();
                         this.GridCustomers.Rows[row].Cells[4].Value = dataTable.Rows[row]["address"].ToString();
                         this.GridCustomers.Rows[row].Cells[5].Value = dataTable.Rows[row]["contactno"].ToString();
@@ -200,7 +200,7 @@ namespace LaundrySystem
                     {
                         this.GridCustomers.Rows[row].Cells[0].Value = dataTable.Rows[row]["id"].ToString();
                         this.GridCustomers.Rows[row].Cells[1].Value = dataTable.Rows[row]["fullname"].ToString();
-                        this.GridCustomers.Rows[row].Cells[2].Value = dataTable.Rows[row]["birthdate"].ToString();
+                        this.GridCustomers.Rows[row].Cells[2].Value = DateTime.Parse(dataTable.Rows[row]["birthdate"].ToString()).Date;
                         this.GridCustomers.Rows[row].Cells[3].Value = dataTable.Rows[row]["gender"].ToString();
                         this.GridCustomers.Rows[row].Cells[4].Value = dataTable.Rows[row]["address"].ToString();
                         this.GridCustomers.Rows[row].Cells[5].Value = dataTable.Rows[row]["contactno"].ToString();

@@ -31,21 +31,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PnlCustomers = new System.Windows.Forms.Panel();
             this.BtnDelete = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnCancel = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnUpdate = new ReaLTaiizor.Controls.ParrotButton();
-            this.BtnSearch = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnBack = new ReaLTaiizor.Controls.ParrotButton();
             this.TbFullnameSearch = new System.Windows.Forms.TextBox();
             this.GridCustomers = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImageLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmbCustGender = new System.Windows.Forms.ComboBox();
             this.DtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.BtnAddCustomer = new ReaLTaiizor.Controls.ParrotButton();
@@ -65,6 +60,14 @@
             this.LblCustomerName = new System.Windows.Forms.Label();
             this.LblSearch = new System.Windows.Forms.Label();
             this.LblCustomerInfo = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImageLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).BeginInit();
@@ -79,7 +82,7 @@
             this.PnlCustomers.Controls.Add(this.BtnDelete);
             this.PnlCustomers.Controls.Add(this.BtnCancel);
             this.PnlCustomers.Controls.Add(this.BtnUpdate);
-            this.PnlCustomers.Controls.Add(this.BtnSearch);
+            this.PnlCustomers.Controls.Add(this.BtnBack);
             this.PnlCustomers.Controls.Add(this.TbFullnameSearch);
             this.PnlCustomers.Controls.Add(this.GridCustomers);
             this.PnlCustomers.Controls.Add(this.CmbCustGender);
@@ -187,30 +190,30 @@
             this.BtnUpdate.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // BtnSearch
+            // BtnBack
             // 
-            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSearch.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnSearch.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnSearch.ButtonImage")));
-            this.BtnSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnSearch.ButtonText = "Search";
-            this.BtnSearch.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnSearch.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.CornerRadius = 5;
-            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSearch.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnSearch.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnSearch.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnSearch.Location = new System.Drawing.Point(1059, 589);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(131, 30);
-            this.BtnSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnSearch.TabIndex = 11;
-            this.BtnSearch.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnSearch.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnBack.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnBack.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnBack.ButtonImage")));
+            this.BtnBack.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnBack.ButtonText = "Back";
+            this.BtnBack.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnBack.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBack.CornerRadius = 5;
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBack.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnBack.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnBack.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBack.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnBack.Location = new System.Drawing.Point(1059, 589);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(131, 30);
+            this.BtnBack.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnBack.TabIndex = 11;
+            this.BtnBack.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBack.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnBack.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // TbFullnameSearch
             // 
@@ -229,6 +232,8 @@
             this.GridCustomers.AllowUserToDeleteRows = false;
             this.GridCustomers.AllowUserToOrderColumns = true;
             this.GridCustomers.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.NullValue = null;
+            this.GridCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -254,62 +259,6 @@
             this.GridCustomers.Size = new System.Drawing.Size(757, 475);
             this.GridCustomers.TabIndex = 10;
             this.GridCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCustomers_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 36.93885F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Fullname
-            // 
-            this.Fullname.FillWeight = 82.20373F;
-            this.Fullname.HeaderText = "Fullname";
-            this.Fullname.Name = "Fullname";
-            this.Fullname.ReadOnly = true;
-            // 
-            // Birthdate
-            // 
-            this.Birthdate.FillWeight = 78.38728F;
-            this.Birthdate.HeaderText = "Birthdate";
-            this.Birthdate.Name = "Birthdate";
-            this.Birthdate.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.FillWeight = 56.67597F;
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.FillWeight = 116.8864F;
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // ContactNum
-            // 
-            this.ContactNum.FillWeight = 101.5229F;
-            this.ContactNum.HeaderText = "Contact Number";
-            this.ContactNum.Name = "ContactNum";
-            this.ContactNum.ReadOnly = true;
-            // 
-            // EmailAddress
-            // 
-            this.EmailAddress.FillWeight = 147.2571F;
-            this.EmailAddress.HeaderText = "EmailAddress";
-            this.EmailAddress.Name = "EmailAddress";
-            this.EmailAddress.ReadOnly = true;
-            // 
-            // ImageLoc
-            // 
-            this.ImageLoc.FillWeight = 180.1279F;
-            this.ImageLoc.HeaderText = "Image Location";
-            this.ImageLoc.Name = "ImageLoc";
-            this.ImageLoc.ReadOnly = true;
             // 
             // CmbCustGender
             // 
@@ -391,7 +340,7 @@
             this.PicCustomer.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.PicCustomer.Name = "PicCustomer";
             this.PicCustomer.Size = new System.Drawing.Size(150, 150);
-            this.PicCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicCustomer.TabIndex = 9;
             this.PicCustomer.TabStop = false;
             // 
@@ -549,6 +498,66 @@
             this.LblCustomerInfo.TabIndex = 8;
             this.LblCustomerInfo.Text = "Customer Info (New Customer)";
             // 
+            // ID
+            // 
+            dataGridViewCellStyle5.NullValue = null;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ID.FillWeight = 36.93885F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Fullname
+            // 
+            this.Fullname.FillWeight = 82.20373F;
+            this.Fullname.HeaderText = "Fullname";
+            this.Fullname.Name = "Fullname";
+            this.Fullname.ReadOnly = true;
+            // 
+            // Birthdate
+            // 
+            dataGridViewCellStyle6.NullValue = null;
+            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Birthdate.FillWeight = 78.38728F;
+            this.Birthdate.HeaderText = "Birthdate";
+            this.Birthdate.Name = "Birthdate";
+            this.Birthdate.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.FillWeight = 56.67597F;
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.FillWeight = 116.8864F;
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // ContactNum
+            // 
+            this.ContactNum.FillWeight = 101.5229F;
+            this.ContactNum.HeaderText = "Contact Number";
+            this.ContactNum.Name = "ContactNum";
+            this.ContactNum.ReadOnly = true;
+            // 
+            // EmailAddress
+            // 
+            this.EmailAddress.FillWeight = 147.2571F;
+            this.EmailAddress.HeaderText = "EmailAddress";
+            this.EmailAddress.Name = "EmailAddress";
+            this.EmailAddress.ReadOnly = true;
+            // 
+            // ImageLoc
+            // 
+            this.ImageLoc.FillWeight = 180.1279F;
+            this.ImageLoc.HeaderText = "Image Location";
+            this.ImageLoc.Name = "ImageLoc";
+            this.ImageLoc.ReadOnly = true;
+            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,15 +596,7 @@
         private System.Windows.Forms.DataGridView GridCustomers;
         private System.Windows.Forms.Label LblFullNameSearch;
         private System.Windows.Forms.Label LblSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ImageLoc;
-        private ReaLTaiizor.Controls.ParrotButton BtnSearch;
+        private ReaLTaiizor.Controls.ParrotButton BtnBack;
         private ReaLTaiizor.Controls.ParrotButton BtnDelete;
         private ReaLTaiizor.Controls.ParrotButton BtnUpdate;
         private System.Windows.Forms.TextBox TbFullnameSearch;
@@ -608,5 +609,13 @@
         }
 
         private ReaLTaiizor.Controls.ParrotButton BtnCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImageLoc;
     }
 }

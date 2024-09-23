@@ -41,15 +41,20 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContactNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImageLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmbCustGender = new System.Windows.Forms.ComboBox();
             this.DtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.BtnAddStaff = new ReaLTaiizor.Controls.ParrotButton();
             this.TbEmailAdd = new System.Windows.Forms.TextBox();
             this.PnlCustomers = new System.Windows.Forms.Panel();
+            this.TbPassword = new System.Windows.Forms.TextBox();
+            this.TbUser = new System.Windows.Forms.TextBox();
             this.TbContactNum = new System.Windows.Forms.TextBox();
             this.TbAddress = new System.Windows.Forms.TextBox();
             this.TbCustomerName = new System.Windows.Forms.TextBox();
+            this.LblPass = new System.Windows.Forms.Label();
+            this.LblUser = new System.Windows.Forms.Label();
             this.LblEmailAd = new System.Windows.Forms.Label();
             this.LblContactNo = new System.Windows.Forms.Label();
             this.LblAddress = new System.Windows.Forms.Label();
@@ -59,10 +64,6 @@
             this.LblCustomerName = new System.Windows.Forms.Label();
             this.LblSearch = new System.Windows.Forms.Label();
             this.LblCustomerInfo = new System.Windows.Forms.Label();
-            this.LblUser = new System.Windows.Forms.Label();
-            this.TbUser = new System.Windows.Forms.TextBox();
-            this.LblPass = new System.Windows.Forms.Label();
-            this.TbPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCustomers)).BeginInit();
             this.PnlCustomers.SuspendLayout();
             this.SuspendLayout();
@@ -147,9 +148,9 @@
             this.TbFullnameSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbFullnameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbFullnameSearch.Location = new System.Drawing.Point(433, 70);
+            this.TbFullnameSearch.Location = new System.Drawing.Point(363, 70);
             this.TbFullnameSearch.Name = "TbFullnameSearch";
-            this.TbFullnameSearch.Size = new System.Drawing.Size(810, 31);
+            this.TbFullnameSearch.Size = new System.Drawing.Size(880, 31);
             this.TbFullnameSearch.TabIndex = 15;
             // 
             // DgvCustomers
@@ -167,12 +168,13 @@
             this.Address,
             this.ContactNum,
             this.EmailAddress,
-            this.ImageLoc});
-            this.DgvCustomers.Location = new System.Drawing.Point(433, 106);
+            this.Username,
+            this.Password});
+            this.DgvCustomers.Location = new System.Drawing.Point(363, 106);
             this.DgvCustomers.Margin = new System.Windows.Forms.Padding(5);
             this.DgvCustomers.Name = "DgvCustomers";
             this.DgvCustomers.RowHeadersVisible = false;
-            this.DgvCustomers.Size = new System.Drawing.Size(810, 449);
+            this.DgvCustomers.Size = new System.Drawing.Size(880, 449);
             this.DgvCustomers.TabIndex = 14;
             // 
             // ID
@@ -217,11 +219,15 @@
             this.EmailAddress.HeaderText = "EmailAddress";
             this.EmailAddress.Name = "EmailAddress";
             // 
-            // ImageLoc
+            // Username
             // 
-            this.ImageLoc.FillWeight = 180.1279F;
-            this.ImageLoc.HeaderText = "Image Location";
-            this.ImageLoc.Name = "ImageLoc";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
             // 
             // CmbCustGender
             // 
@@ -242,6 +248,7 @@
             this.DtpBirthdate.Name = "DtpBirthdate";
             this.DtpBirthdate.Size = new System.Drawing.Size(212, 20);
             this.DtpBirthdate.TabIndex = 12;
+            this.DtpBirthdate.ValueChanged += new System.EventHandler(this.DtpBirthdate_ValueChanged);
             // 
             // BtnAddStaff
             // 
@@ -266,6 +273,7 @@
             this.BtnAddStaff.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnAddStaff.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnAddStaff.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click);
             // 
             // TbEmailAdd
             // 
@@ -274,6 +282,7 @@
             this.TbEmailAdd.Name = "TbEmailAdd";
             this.TbEmailAdd.Size = new System.Drawing.Size(212, 23);
             this.TbEmailAdd.TabIndex = 6;
+            this.TbEmailAdd.TextChanged += new System.EventHandler(this.TbEmailAdd_TextChanged);
             // 
             // PnlCustomers
             // 
@@ -312,6 +321,25 @@
             this.PnlCustomers.Size = new System.Drawing.Size(1258, 598);
             this.PnlCustomers.TabIndex = 1;
             // 
+            // TbPassword
+            // 
+            this.TbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TbPassword.Location = new System.Drawing.Point(16, 455);
+            this.TbPassword.Name = "TbPassword";
+            this.TbPassword.PasswordChar = '*';
+            this.TbPassword.Size = new System.Drawing.Size(212, 23);
+            this.TbPassword.TabIndex = 6;
+            this.TbPassword.TextChanged += new System.EventHandler(this.TbPassword_TextChanged);
+            // 
+            // TbUser
+            // 
+            this.TbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TbUser.Location = new System.Drawing.Point(16, 400);
+            this.TbUser.Name = "TbUser";
+            this.TbUser.Size = new System.Drawing.Size(212, 23);
+            this.TbUser.TabIndex = 6;
+            this.TbUser.TextChanged += new System.EventHandler(this.TbUser_TextChanged);
+            // 
             // TbContactNum
             // 
             this.TbContactNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -319,6 +347,7 @@
             this.TbContactNum.Name = "TbContactNum";
             this.TbContactNum.Size = new System.Drawing.Size(212, 23);
             this.TbContactNum.TabIndex = 6;
+            this.TbContactNum.TextChanged += new System.EventHandler(this.TbContactNum_TextChanged);
             // 
             // TbAddress
             // 
@@ -327,6 +356,7 @@
             this.TbAddress.Name = "TbAddress";
             this.TbAddress.Size = new System.Drawing.Size(212, 23);
             this.TbAddress.TabIndex = 6;
+            this.TbAddress.TextChanged += new System.EventHandler(this.TbAddress_TextChanged);
             // 
             // TbCustomerName
             // 
@@ -335,6 +365,31 @@
             this.TbCustomerName.Name = "TbCustomerName";
             this.TbCustomerName.Size = new System.Drawing.Size(212, 23);
             this.TbCustomerName.TabIndex = 6;
+            this.TbCustomerName.TextChanged += new System.EventHandler(this.TbCustomerName_TextChanged);
+            // 
+            // LblPass
+            // 
+            this.LblPass.AutoSize = true;
+            this.LblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPass.ForeColor = System.Drawing.Color.White;
+            this.LblPass.Location = new System.Drawing.Point(13, 436);
+            this.LblPass.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
+            this.LblPass.Name = "LblPass";
+            this.LblPass.Size = new System.Drawing.Size(67, 16);
+            this.LblPass.TabIndex = 7;
+            this.LblPass.Text = "Password";
+            // 
+            // LblUser
+            // 
+            this.LblUser.AutoSize = true;
+            this.LblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUser.ForeColor = System.Drawing.Color.White;
+            this.LblUser.Location = new System.Drawing.Point(13, 381);
+            this.LblUser.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
+            this.LblUser.Name = "LblUser";
+            this.LblUser.Size = new System.Drawing.Size(70, 16);
+            this.LblUser.TabIndex = 7;
+            this.LblUser.Text = "Username";
             // 
             // LblEmailAd
             // 
@@ -401,7 +456,7 @@
             this.LblFullNameSearch.AutoSize = true;
             this.LblFullNameSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFullNameSearch.ForeColor = System.Drawing.Color.White;
-            this.LblFullNameSearch.Location = new System.Drawing.Point(430, 51);
+            this.LblFullNameSearch.Location = new System.Drawing.Point(360, 51);
             this.LblFullNameSearch.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
             this.LblFullNameSearch.Name = "LblFullNameSearch";
             this.LblFullNameSearch.Size = new System.Drawing.Size(68, 16);
@@ -425,7 +480,7 @@
             this.LblSearch.AutoSize = true;
             this.LblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSearch.ForeColor = System.Drawing.Color.White;
-            this.LblSearch.Location = new System.Drawing.Point(427, 10);
+            this.LblSearch.Location = new System.Drawing.Point(357, 10);
             this.LblSearch.Name = "LblSearch";
             this.LblSearch.Size = new System.Drawing.Size(100, 31);
             this.LblSearch.TabIndex = 8;
@@ -441,47 +496,6 @@
             this.LblCustomerInfo.Size = new System.Drawing.Size(329, 31);
             this.LblCustomerInfo.TabIndex = 8;
             this.LblCustomerInfo.Text = "Staff Info (New Customer)";
-            // 
-            // LblUser
-            // 
-            this.LblUser.AutoSize = true;
-            this.LblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUser.ForeColor = System.Drawing.Color.White;
-            this.LblUser.Location = new System.Drawing.Point(13, 381);
-            this.LblUser.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
-            this.LblUser.Name = "LblUser";
-            this.LblUser.Size = new System.Drawing.Size(70, 16);
-            this.LblUser.TabIndex = 7;
-            this.LblUser.Text = "Username";
-            // 
-            // TbUser
-            // 
-            this.TbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TbUser.Location = new System.Drawing.Point(16, 400);
-            this.TbUser.Name = "TbUser";
-            this.TbUser.Size = new System.Drawing.Size(212, 23);
-            this.TbUser.TabIndex = 6;
-            // 
-            // LblPass
-            // 
-            this.LblPass.AutoSize = true;
-            this.LblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPass.ForeColor = System.Drawing.Color.White;
-            this.LblPass.Location = new System.Drawing.Point(13, 436);
-            this.LblPass.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
-            this.LblPass.Name = "LblPass";
-            this.LblPass.Size = new System.Drawing.Size(67, 16);
-            this.LblPass.TabIndex = 7;
-            this.LblPass.Text = "Password";
-            // 
-            // TbPassword
-            // 
-            this.TbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TbPassword.Location = new System.Drawing.Point(16, 455);
-            this.TbPassword.Name = "TbPassword";
-            this.TbPassword.PasswordChar = '*';
-            this.TbPassword.Size = new System.Drawing.Size(212, 23);
-            this.TbPassword.TabIndex = 6;
             // 
             // FormStaffs
             // 
@@ -505,14 +519,6 @@
         private ReaLTaiizor.Controls.ParrotButton BtnSearch;
         private System.Windows.Forms.TextBox TbFullnameSearch;
         private System.Windows.Forms.DataGridView DgvCustomers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ImageLoc;
         private System.Windows.Forms.ComboBox CmbCustGender;
         private System.Windows.Forms.DateTimePicker DtpBirthdate;
         private ReaLTaiizor.Controls.ParrotButton BtnAddStaff;
@@ -534,5 +540,14 @@
         private System.Windows.Forms.TextBox TbUser;
         private System.Windows.Forms.Label LblPass;
         private System.Windows.Forms.Label LblUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }
