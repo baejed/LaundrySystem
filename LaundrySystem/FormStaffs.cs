@@ -37,11 +37,12 @@ namespace LaundrySystem
             InitializeComponent();
             if (!this.globalProcedure.fncConnectToDatabase())
                 MessageBox.Show("Not Connected");
+            DisplayAllStaff();
         }
 
         private void TbCustomerName_TextChanged(object sender, EventArgs e)
         {
-            this.v_fullName = this.TbCustomerName.Text;
+            this.v_fullName = this.TbStaffName.Text;
         }
 
         private void DtpBirthdate_ValueChanged(object sender, EventArgs e)
@@ -93,11 +94,71 @@ namespace LaundrySystem
                 gProcCmd.Parameters.AddWithValue("@p_password", v_passHash);
                 gProcCmd.ExecuteNonQuery();
                 MessageBox.Show("Staff saved successfully");
+                DisplayAllStaff();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Add failed");
+                MessageBox.Show(ex.Message);
             }
+        }
+
+        public void DisplayAllStaff()
+        {
+            try
+            {
+                MySqlCommand gProcCmd = globalProcedure.sqlCommand;
+
+                this.globalProcedure.sqlLaundryAdapter = new MySqlDataAdapter();
+                this.globalProcedure.datLaundry = new DataTable();
+
+                gProcCmd.Parameters.Clear();
+                gProcCmd.CommandText = "procDisplayAllStaff";
+                gProcCmd.CommandType = CommandType.StoredProcedure;
+                this.globalProcedure.sqlLaundryAdapter.SelectCommand = this.globalProcedure.sqlCommand;
+                this.globalProcedure.datLaundry.Clear();
+                this.globalProcedure.sqlLaundryAdapter.Fill(this.globalProcedure.datLaundry);
+
+                if (globalProcedure.datLaundry.Rows.Count > 0)
+                {
+                    DataTable dataTable = globalProcedure.datLaundry;
+                    int row = 0;
+                    int totalRecords = globalProcedure.datLaundry.Rows.Count;
+                    this.LblTotalRecs.Text = "Total Records: " + totalRecords.ToString();
+                    this.GridStaffs.RowCount = totalRecords;
+
+                    while (!(totalRecords - 1 < row))
+                    {
+                        this.GridStaffs.Rows[row].Cells[0].Value = dataTable.Rows[row]["id"].ToString();
+                        this.GridStaffs.Rows[row].Cells[1].Value = dataTable.Rows[row]["fullname"].ToString();
+                        this.GridStaffs.Rows[row].Cells[2].Value = DateTime.Parse(dataTable.Rows[row]["birthdate"].ToString()).Date;
+                        this.GridStaffs.Rows[row].Cells[3].Value = dataTable.Rows[row]["gender"].ToString();
+                        this.GridStaffs.Rows[row].Cells[4].Value = dataTable.Rows[row]["address"].ToString();
+                        this.GridStaffs.Rows[row].Cells[5].Value = dataTable.Rows[row]["contactno"].ToString();
+                        this.GridStaffs.Rows[row].Cells[6].Value = dataTable.Rows[row]["emailadd"].ToString();
+                        this.GridStaffs.Rows[row].Cells[7].Value = dataTable.Rows[row]["username"].ToString();
+                        this.GridStaffs.Rows[row].Cells[8].Value = dataTable.Rows[row]["password"].ToString();
+                        row++;
+                    }
+
+                }
+                else
+                {
+                    //MessageBox.Show("Record not found!");
+                }
+
+                this.globalProcedure.sqlLaundryAdapter.Dispose();
+                this.globalProcedure.datLaundry.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CmbStaffGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.v_gender = this.CmbStaffGender.SelectedItem.ToString();
         }
     }
 }

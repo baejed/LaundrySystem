@@ -1,6 +1,6 @@
 ﻿namespace LaundrySystem
 {
-    partial class Laundries
+    partial class FormLaundries
     {
         /// <summary>
         /// Required designer variable.

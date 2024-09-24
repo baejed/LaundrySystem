@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace LaundrySystem
 {
-    public partial class Customers : Form
+    public partial class FormCustomers : Form
     {
 
         Color disabledColor = Color.FromArgb(135, 190, 245);
@@ -37,7 +37,7 @@ namespace LaundrySystem
 
         string v_fullnameSearch = "";
 
-        public Customers()
+        public FormCustomers()
         {
             InitializeComponent();
             if(!this.globalProcedure.fncConnectToDatabase())
@@ -320,11 +320,13 @@ namespace LaundrySystem
                 this.BtnUpdate.Enabled = value;
                 this.BtnDelete.Enabled = value;
                 this.BtnCancel.Enabled = value;
+                this.BtnClear.Enabled = !value;
                 this.BtnAddCustomer.Enabled = !value;
 
                 this.BtnUpdate.BackgroundColor = value ? Color.Black : disabledColor;
                 this.BtnDelete.BackgroundColor = value ? Color.Black : disabledColor;
                 this.BtnCancel.BackgroundColor = value ? Color.Black : disabledColor;
+                this.BtnClear.BackgroundColor = value ? disabledColor : Color.Black;
                 this.BtnAddCustomer.BackgroundColor = value ? disabledColor : Color.Black;
 
             }
@@ -365,6 +367,16 @@ namespace LaundrySystem
 
             ClearCustomerDetails();
             Editing = false;
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            ClearCustomerDetails();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

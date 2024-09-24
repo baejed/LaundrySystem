@@ -1,6 +1,6 @@
 ﻿namespace LaundrySystem
 {
-    partial class Customers
+    partial class FormCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomers));
 
         #region Windows Form Designer generated code
 
@@ -30,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomers));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,6 +41,14 @@
             this.BtnBack = new ReaLTaiizor.Controls.ParrotButton();
             this.TbFullnameSearch = new System.Windows.Forms.TextBox();
             this.GridCustomers = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImageLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmbCustGender = new System.Windows.Forms.ComboBox();
             this.DtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.BtnAddCustomer = new ReaLTaiizor.Controls.ParrotButton();
@@ -60,14 +68,7 @@
             this.LblCustomerName = new System.Windows.Forms.Label();
             this.LblSearch = new System.Windows.Forms.Label();
             this.LblCustomerInfo = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImageLoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnClear = new ReaLTaiizor.Controls.ParrotButton();
             this.PnlCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).BeginInit();
@@ -80,6 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlCustomers.BackColor = System.Drawing.Color.DodgerBlue;
             this.PnlCustomers.Controls.Add(this.BtnDelete);
+            this.PnlCustomers.Controls.Add(this.BtnClear);
             this.PnlCustomers.Controls.Add(this.BtnCancel);
             this.PnlCustomers.Controls.Add(this.BtnUpdate);
             this.PnlCustomers.Controls.Add(this.BtnBack);
@@ -127,7 +129,7 @@
             this.BtnDelete.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnDelete.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnDelete.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnDelete.Location = new System.Drawing.Point(16, 475);
+            this.BtnDelete.Location = new System.Drawing.Point(16, 516);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(179, 35);
             this.BtnDelete.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -153,7 +155,7 @@
             this.BtnCancel.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnCancel.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnCancel.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnCancel.Location = new System.Drawing.Point(16, 516);
+            this.BtnCancel.Location = new System.Drawing.Point(16, 557);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(179, 35);
             this.BtnCancel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -180,7 +182,7 @@
             this.BtnUpdate.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnUpdate.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnUpdate.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnUpdate.Location = new System.Drawing.Point(16, 434);
+            this.BtnUpdate.Location = new System.Drawing.Point(16, 475);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(179, 35);
             this.BtnUpdate.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -214,6 +216,7 @@
             this.BtnBack.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnBack.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnBack.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // TbFullnameSearch
             // 
@@ -259,6 +262,66 @@
             this.GridCustomers.Size = new System.Drawing.Size(757, 475);
             this.GridCustomers.TabIndex = 10;
             this.GridCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCustomers_CellClick);
+            // 
+            // ID
+            // 
+            dataGridViewCellStyle5.NullValue = null;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ID.FillWeight = 36.93885F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Fullname
+            // 
+            this.Fullname.FillWeight = 82.20373F;
+            this.Fullname.HeaderText = "Fullname";
+            this.Fullname.Name = "Fullname";
+            this.Fullname.ReadOnly = true;
+            // 
+            // Birthdate
+            // 
+            dataGridViewCellStyle6.NullValue = null;
+            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Birthdate.FillWeight = 78.38728F;
+            this.Birthdate.HeaderText = "Birthdate";
+            this.Birthdate.Name = "Birthdate";
+            this.Birthdate.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.FillWeight = 56.67597F;
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.FillWeight = 116.8864F;
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // ContactNum
+            // 
+            this.ContactNum.FillWeight = 101.5229F;
+            this.ContactNum.HeaderText = "Contact Number";
+            this.ContactNum.Name = "ContactNum";
+            this.ContactNum.ReadOnly = true;
+            // 
+            // EmailAddress
+            // 
+            this.EmailAddress.FillWeight = 147.2571F;
+            this.EmailAddress.HeaderText = "EmailAddress";
+            this.EmailAddress.Name = "EmailAddress";
+            this.EmailAddress.ReadOnly = true;
+            // 
+            // ImageLoc
+            // 
+            this.ImageLoc.FillWeight = 180.1279F;
+            this.ImageLoc.HeaderText = "Image Location";
+            this.ImageLoc.Name = "ImageLoc";
+            this.ImageLoc.ReadOnly = true;
             // 
             // CmbCustGender
             // 
@@ -498,73 +561,39 @@
             this.LblCustomerInfo.TabIndex = 8;
             this.LblCustomerInfo.Text = "Customer Info (New Customer)";
             // 
-            // ID
+            // BtnClear
             // 
-            dataGridViewCellStyle5.NullValue = null;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ID.FillWeight = 36.93885F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.BtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnClear.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnClear.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnClear.ButtonImage")));
+            this.BtnClear.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnClear.ButtonText = "Clear";
+            this.BtnClear.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnClear.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.CornerRadius = 5;
+            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnClear.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnClear.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnClear.Location = new System.Drawing.Point(16, 434);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(179, 35);
+            this.BtnClear.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnClear.TabIndex = 12;
+            this.BtnClear.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnClear.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
-            // Fullname
-            // 
-            this.Fullname.FillWeight = 82.20373F;
-            this.Fullname.HeaderText = "Fullname";
-            this.Fullname.Name = "Fullname";
-            this.Fullname.ReadOnly = true;
-            // 
-            // Birthdate
-            // 
-            dataGridViewCellStyle6.NullValue = null;
-            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Birthdate.FillWeight = 78.38728F;
-            this.Birthdate.HeaderText = "Birthdate";
-            this.Birthdate.Name = "Birthdate";
-            this.Birthdate.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.FillWeight = 56.67597F;
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.FillWeight = 116.8864F;
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // ContactNum
-            // 
-            this.ContactNum.FillWeight = 101.5229F;
-            this.ContactNum.HeaderText = "Contact Number";
-            this.ContactNum.Name = "ContactNum";
-            this.ContactNum.ReadOnly = true;
-            // 
-            // EmailAddress
-            // 
-            this.EmailAddress.FillWeight = 147.2571F;
-            this.EmailAddress.HeaderText = "EmailAddress";
-            this.EmailAddress.Name = "EmailAddress";
-            this.EmailAddress.ReadOnly = true;
-            // 
-            // ImageLoc
-            // 
-            this.ImageLoc.FillWeight = 180.1279F;
-            this.ImageLoc.HeaderText = "Image Location";
-            this.ImageLoc.Name = "ImageLoc";
-            this.ImageLoc.ReadOnly = true;
-            // 
-            // Customers
+            // FormCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 624);
             this.Controls.Add(this.PnlCustomers);
-            this.Name = "Customers";
+            this.Name = "FormCustomers";
             this.Text = "Customers";
             this.PnlCustomers.ResumeLayout(false);
             this.PnlCustomers.PerformLayout();
@@ -617,5 +646,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImageLoc;
+        private ReaLTaiizor.Controls.ParrotButton BtnClear;
     }
 }

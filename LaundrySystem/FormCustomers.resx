@@ -127,6 +127,16 @@
         7c6xi9cnCSijxZGkdAfug/LK1kgQ0QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="BtnClear.ButtonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAOhJREFUSEvl
+        k0EOgjAQRTmIGo7izTwCeAKP4tLES7DgAG7djXz8g+0IpUNXxpdMIDPl/RJK9X8cWrkM1Q0luK8bqTkq
+        A6J9K1eKw+qKQ4y82zVyROG+OMTK2R7BrCgkJVc2h+TIFXeIR65kh2yRK1HIWU5sf+CCB+U92y54uvC8
+        sPXG7Dz9mgm4yfjtjbzHUBd5QkIPrmxPv/+Uyl24Qswm42/HpoQiT0hSDlRkJTkhq3KAI7UkSYVkyZUl
+        CZgLccnBnISjETPvB/lN13LJOpkhOMaY++SKCSmpO5XfMORpHvDWcsAPUVUvOeoDS8BUm7kAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <data name="BtnCancel.ButtonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJ5JREFUSEvt

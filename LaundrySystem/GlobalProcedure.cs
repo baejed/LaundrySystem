@@ -33,7 +33,7 @@ namespace LaundrySystem
                 servername = "localhost";
                 databasename = "laundry";
                 username = "root";
-                password = "";
+                password = "bajed";
                 port = "3306";
 
                 strConnection = "Server=" + servername + ";" +

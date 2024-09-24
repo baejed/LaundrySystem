@@ -104,11 +104,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers.cs">
+    <Compile Include="FormCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers.Designer.cs">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <Compile Include="FormCustomers.Designer.cs">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
@@ -123,28 +123,28 @@
       <DependentUpon>FormStaffs.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalProcedure.cs" />
-    <Compile Include="Laundries.cs">
+    <Compile Include="FormLaundries.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laundries.Designer.cs">
-      <DependentUpon>Laundries.cs</DependentUpon>
+    <Compile Include="FormLaundries.Designer.cs">
+      <DependentUpon>FormLaundries.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServiceForm.cs">
+    <Compile Include="FormService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServiceForm.Designer.cs">
-      <DependentUpon>ServiceForm.cs</DependentUpon>
+    <Compile Include="FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Customers.resx">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <EmbeddedResource Include="FormCustomers.resx">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
@@ -152,11 +152,11 @@
     <EmbeddedResource Include="FormStaffs.resx">
       <DependentUpon>FormStaffs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laundries.resx">
-      <DependentUpon>Laundries.cs</DependentUpon>
+    <EmbeddedResource Include="FormLaundries.resx">
+      <DependentUpon>FormLaundries.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,8 +168,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ServiceForm.resx">
-      <DependentUpon>ServiceForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

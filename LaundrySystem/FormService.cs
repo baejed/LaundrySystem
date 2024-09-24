@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LaundrySystem
 {
-    public partial class Laundries : Form
+    public partial class FormService : Form
     {
-        public Laundries()
+        public FormService()
         {
             InitializeComponent();
         }

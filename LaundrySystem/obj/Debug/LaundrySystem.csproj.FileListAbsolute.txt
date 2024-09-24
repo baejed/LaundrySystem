@@ -15,16 +15,12 @@ C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\LaundrySystem.
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\ReaLTaiizor.dll
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\ReaLTaiizor.xml
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.csproj.AssemblyReference.cache
-C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.LoginForm.resources
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Properties.Resources.resources
-C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.ServiceForm.resources
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.csproj.GenerateResource.cache
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.csproj.CoreCompileInputs.cache
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundryS.474C40ED.Up2Date
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.exe
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.pdb
-C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Customers.resources
-C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Laundries.resources
 C:\Users\student\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\ReaLTaiizor.dll
 C:\Users\student\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\ReaLTaiizor.xml
 C:\Users\student\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.Customers.resources
@@ -148,3 +144,7 @@ C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\bin\Debug\System.Threadi
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormDashboard.resources
 C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormStaffs.resources
 C:\Users\student\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormStaffs.resources
+C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormCustomers.resources
+C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormLaundries.resources
+C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormLogin.resources
+C:\Users\Bajed\Source\Repos\LaundrySystem\LaundrySystem\obj\Debug\LaundrySystem.FormService.resources
