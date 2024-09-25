@@ -42,5 +42,10 @@ namespace LaundrySystem
         {
             formService.ShowDialog();
         }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

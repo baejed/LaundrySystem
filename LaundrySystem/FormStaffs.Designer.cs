@@ -29,36 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStaffs));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnDelete = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnUpdate = new ReaLTaiizor.Controls.ParrotButton();
-            this.BtnSearch = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnCancel = new ReaLTaiizor.Controls.ParrotButton();
             this.TbFullnameSearch = new System.Windows.Forms.TextBox();
             this.GridStaffs = new System.Windows.Forms.DataGridView();
-            this.CmbStaffGender = new System.Windows.Forms.ComboBox();
-            this.DtpBirthdate = new System.Windows.Forms.DateTimePicker();
-            this.BtnAddStaff = new ReaLTaiizor.Controls.ParrotButton();
-            this.TbEmailAdd = new System.Windows.Forms.TextBox();
-            this.PnlStaffs = new System.Windows.Forms.Panel();
-            this.TbPassword = new System.Windows.Forms.TextBox();
-            this.TbUser = new System.Windows.Forms.TextBox();
-            this.TbContactNum = new System.Windows.Forms.TextBox();
-            this.TbAddress = new System.Windows.Forms.TextBox();
-            this.TbStaffName = new System.Windows.Forms.TextBox();
-            this.LblPass = new System.Windows.Forms.Label();
-            this.LblUser = new System.Windows.Forms.Label();
-            this.LblEmailAd = new System.Windows.Forms.Label();
-            this.LblContactNo = new System.Windows.Forms.Label();
-            this.LblAddress = new System.Windows.Forms.Label();
-            this.LblGender = new System.Windows.Forms.Label();
-            this.LblBirthDate = new System.Windows.Forms.Label();
-            this.LblFullNameSearch = new System.Windows.Forms.Label();
-            this.LblCustomerName = new System.Windows.Forms.Label();
-            this.LblSearch = new System.Windows.Forms.Label();
-            this.LblStaffInfo = new System.Windows.Forms.Label();
-            this.BtnClear = new ReaLTaiizor.Controls.ParrotButton();
-            this.BtnBack = new ReaLTaiizor.Controls.ParrotButton();
-            this.LblTotalRecs = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,9 +43,36 @@
             this.ContactNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmbStaffGender = new System.Windows.Forms.ComboBox();
+            this.DtpBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.BtnAddStaff = new ReaLTaiizor.Controls.ParrotButton();
+            this.TbEmailAdd = new System.Windows.Forms.TextBox();
+            this.PnlStaffs = new System.Windows.Forms.Panel();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
+            this.BtnBack = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnClear = new ReaLTaiizor.Controls.ParrotButton();
+            this.TbConfirmPassword = new System.Windows.Forms.TextBox();
+            this.TbPassword = new System.Windows.Forms.TextBox();
+            this.TbUser = new System.Windows.Forms.TextBox();
+            this.TbContactNum = new System.Windows.Forms.TextBox();
+            this.TbAddress = new System.Windows.Forms.TextBox();
+            this.LblConfirmPassword = new System.Windows.Forms.Label();
+            this.TbStaffName = new System.Windows.Forms.TextBox();
+            this.LblPass = new System.Windows.Forms.Label();
+            this.LblUser = new System.Windows.Forms.Label();
+            this.LblEmailAd = new System.Windows.Forms.Label();
+            this.LblContactNo = new System.Windows.Forms.Label();
+            this.LblAddress = new System.Windows.Forms.Label();
+            this.LblGender = new System.Windows.Forms.Label();
+            this.LblBirthDate = new System.Windows.Forms.Label();
+            this.LblTotalRecs = new System.Windows.Forms.Label();
+            this.LblFullNameSearch = new System.Windows.Forms.Label();
+            this.LblCustomerName = new System.Windows.Forms.Label();
+            this.LblSearch = new System.Windows.Forms.Label();
+            this.LblStaffInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridStaffs)).BeginInit();
             this.PnlStaffs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnDelete
@@ -87,7 +90,7 @@
             this.BtnDelete.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnDelete.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnDelete.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnDelete.Location = new System.Drawing.Point(16, 536);
+            this.BtnDelete.Location = new System.Drawing.Point(16, 595);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(156, 35);
             this.BtnDelete.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -95,6 +98,7 @@
             this.BtnDelete.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnDelete.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnDelete.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnUpdate
             // 
@@ -111,7 +115,7 @@
             this.BtnUpdate.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnUpdate.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnUpdate.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnUpdate.Location = new System.Drawing.Point(16, 577);
+            this.BtnUpdate.Location = new System.Drawing.Point(178, 595);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(156, 35);
             this.BtnUpdate.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -119,30 +123,32 @@
             this.BtnUpdate.TextColor = System.Drawing.Color.DodgerBlue;
             this.BtnUpdate.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.BtnUpdate.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // BtnSearch
+            // BtnCancel
             // 
-            this.BtnSearch.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnSearch.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnSearch.ButtonImage")));
-            this.BtnSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnSearch.ButtonText = "Search";
-            this.BtnSearch.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnSearch.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.CornerRadius = 5;
-            this.BtnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSearch.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnSearch.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnSearch.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnSearch.Location = new System.Drawing.Point(178, 536);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(156, 35);
-            this.BtnSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnSearch.TabIndex = 16;
-            this.BtnSearch.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnSearch.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnCancel.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnCancel.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ButtonImage")));
+            this.BtnCancel.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnCancel.ButtonText = "Cancel";
+            this.BtnCancel.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnCancel.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCancel.CornerRadius = 5;
+            this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnCancel.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnCancel.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCancel.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnCancel.Location = new System.Drawing.Point(16, 636);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(156, 35);
+            this.BtnCancel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnCancel.TabIndex = 16;
+            this.BtnCancel.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCancel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnCancel.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // TbFullnameSearch
             // 
@@ -156,6 +162,10 @@
             // 
             // GridStaffs
             // 
+            this.GridStaffs.AllowUserToAddRows = false;
+            this.GridStaffs.AllowUserToDeleteRows = false;
+            this.GridStaffs.AllowUserToOrderColumns = true;
+            this.GridStaffs.AllowUserToResizeRows = false;
             this.GridStaffs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -169,14 +179,67 @@
             this.Address,
             this.ContactNum,
             this.EmailAddress,
-            this.Username,
-            this.Password});
+            this.Username});
             this.GridStaffs.Location = new System.Drawing.Point(363, 106);
             this.GridStaffs.Margin = new System.Windows.Forms.Padding(5);
+            this.GridStaffs.MultiSelect = false;
             this.GridStaffs.Name = "GridStaffs";
+            this.GridStaffs.ReadOnly = true;
             this.GridStaffs.RowHeadersVisible = false;
-            this.GridStaffs.Size = new System.Drawing.Size(880, 465);
+            this.GridStaffs.Size = new System.Drawing.Size(880, 534);
             this.GridStaffs.TabIndex = 14;
+            this.GridStaffs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridStaffs_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 36.93885F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Fullname
+            // 
+            this.Fullname.FillWeight = 82.20373F;
+            this.Fullname.HeaderText = "Fullname";
+            this.Fullname.Name = "Fullname";
+            // 
+            // Birthdate
+            // 
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Birthdate.FillWeight = 78.38728F;
+            this.Birthdate.HeaderText = "Birthdate";
+            this.Birthdate.Name = "Birthdate";
+            this.Birthdate.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.FillWeight = 56.67597F;
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            // 
+            // Address
+            // 
+            this.Address.FillWeight = 116.8864F;
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            // 
+            // ContactNum
+            // 
+            this.ContactNum.FillWeight = 101.5229F;
+            this.ContactNum.HeaderText = "Contact Number";
+            this.ContactNum.Name = "ContactNum";
+            // 
+            // EmailAddress
+            // 
+            this.EmailAddress.FillWeight = 147.2571F;
+            this.EmailAddress.HeaderText = "EmailAddress";
+            this.EmailAddress.Name = "EmailAddress";
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
             // 
             // CmbStaffGender
             // 
@@ -215,7 +278,7 @@
             this.BtnAddStaff.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnAddStaff.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnAddStaff.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnAddStaff.Location = new System.Drawing.Point(16, 495);
+            this.BtnAddStaff.Location = new System.Drawing.Point(16, 554);
             this.BtnAddStaff.Name = "BtnAddStaff";
             this.BtnAddStaff.Size = new System.Drawing.Size(156, 35);
             this.BtnAddStaff.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -240,21 +303,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlStaffs.BackColor = System.Drawing.Color.DodgerBlue;
+            this.PnlStaffs.Controls.Add(this.PicLogo);
             this.PnlStaffs.Controls.Add(this.BtnBack);
             this.PnlStaffs.Controls.Add(this.BtnClear);
             this.PnlStaffs.Controls.Add(this.BtnDelete);
             this.PnlStaffs.Controls.Add(this.BtnUpdate);
-            this.PnlStaffs.Controls.Add(this.BtnSearch);
+            this.PnlStaffs.Controls.Add(this.BtnCancel);
             this.PnlStaffs.Controls.Add(this.TbFullnameSearch);
             this.PnlStaffs.Controls.Add(this.GridStaffs);
             this.PnlStaffs.Controls.Add(this.CmbStaffGender);
             this.PnlStaffs.Controls.Add(this.DtpBirthdate);
             this.PnlStaffs.Controls.Add(this.BtnAddStaff);
+            this.PnlStaffs.Controls.Add(this.TbConfirmPassword);
             this.PnlStaffs.Controls.Add(this.TbPassword);
             this.PnlStaffs.Controls.Add(this.TbUser);
             this.PnlStaffs.Controls.Add(this.TbEmailAdd);
             this.PnlStaffs.Controls.Add(this.TbContactNum);
             this.PnlStaffs.Controls.Add(this.TbAddress);
+            this.PnlStaffs.Controls.Add(this.LblConfirmPassword);
             this.PnlStaffs.Controls.Add(this.TbStaffName);
             this.PnlStaffs.Controls.Add(this.LblPass);
             this.PnlStaffs.Controls.Add(this.LblUser);
@@ -271,8 +337,81 @@
             this.PnlStaffs.Location = new System.Drawing.Point(0, 0);
             this.PnlStaffs.Margin = new System.Windows.Forms.Padding(0);
             this.PnlStaffs.Name = "PnlStaffs";
-            this.PnlStaffs.Size = new System.Drawing.Size(1258, 630);
+            this.PnlStaffs.Size = new System.Drawing.Size(1258, 699);
             this.PnlStaffs.TabIndex = 1;
+            // 
+            // PicLogo
+            // 
+            this.PicLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Location = new System.Drawing.Point(1128, 0);
+            this.PicLogo.Margin = new System.Windows.Forms.Padding(10);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(115, 71);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicLogo.TabIndex = 18;
+            this.PicLogo.TabStop = false;
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnBack.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnBack.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnBack.ButtonImage")));
+            this.BtnBack.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnBack.ButtonText = "Back";
+            this.BtnBack.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnBack.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBack.CornerRadius = 5;
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBack.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnBack.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnBack.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBack.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnBack.Location = new System.Drawing.Point(1090, 648);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(156, 35);
+            this.BtnBack.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnBack.TabIndex = 17;
+            this.BtnBack.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnBack.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnBack.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnClear.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnClear.ButtonImage")));
+            this.BtnClear.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnClear.ButtonText = "Clear";
+            this.BtnClear.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnClear.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.CornerRadius = 5;
+            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnClear.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnClear.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnClear.Location = new System.Drawing.Point(178, 554);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(156, 35);
+            this.BtnClear.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnClear.TabIndex = 16;
+            this.BtnClear.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnClear.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // TbConfirmPassword
+            // 
+            this.TbConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TbConfirmPassword.Location = new System.Drawing.Point(16, 510);
+            this.TbConfirmPassword.Name = "TbConfirmPassword";
+            this.TbConfirmPassword.PasswordChar = '*';
+            this.TbConfirmPassword.Size = new System.Drawing.Size(212, 23);
+            this.TbConfirmPassword.TabIndex = 8;
+            this.TbConfirmPassword.TextChanged += new System.EventHandler(this.TbConfirmPassword_TextChanged);
             // 
             // TbPassword
             // 
@@ -310,6 +449,18 @@
             this.TbAddress.Size = new System.Drawing.Size(212, 23);
             this.TbAddress.TabIndex = 4;
             this.TbAddress.TextChanged += new System.EventHandler(this.TbAddress_TextChanged);
+            // 
+            // LblConfirmPassword
+            // 
+            this.LblConfirmPassword.AutoSize = true;
+            this.LblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblConfirmPassword.ForeColor = System.Drawing.Color.White;
+            this.LblConfirmPassword.Location = new System.Drawing.Point(13, 491);
+            this.LblConfirmPassword.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
+            this.LblConfirmPassword.Name = "LblConfirmPassword";
+            this.LblConfirmPassword.Size = new System.Drawing.Size(115, 16);
+            this.LblConfirmPassword.TabIndex = 7;
+            this.LblConfirmPassword.Text = "Confirm Password";
             // 
             // TbStaffName
             // 
@@ -404,6 +555,19 @@
             this.LblBirthDate.TabIndex = 7;
             this.LblBirthDate.Text = "Birthdate";
             // 
+            // LblTotalRecs
+            // 
+            this.LblTotalRecs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblTotalRecs.AutoSize = true;
+            this.LblTotalRecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalRecs.ForeColor = System.Drawing.Color.White;
+            this.LblTotalRecs.Location = new System.Drawing.Point(360, 646);
+            this.LblTotalRecs.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
+            this.LblTotalRecs.Name = "LblTotalRecs";
+            this.LblTotalRecs.Size = new System.Drawing.Size(114, 16);
+            this.LblTotalRecs.TabIndex = 7;
+            this.LblTotalRecs.Text = "Total Record(s): 0";
+            // 
             // LblFullNameSearch
             // 
             this.LblFullNameSearch.AutoSize = true;
@@ -450,133 +614,18 @@
             this.LblStaffInfo.TabIndex = 8;
             this.LblStaffInfo.Text = "Staff Info (New Staff)";
             // 
-            // BtnClear
-            // 
-            this.BtnClear.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnClear.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnClear.ButtonImage")));
-            this.BtnClear.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnClear.ButtonText = "Clear";
-            this.BtnClear.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnClear.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnClear.CornerRadius = 5;
-            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClear.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnClear.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnClear.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnClear.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnClear.Location = new System.Drawing.Point(178, 495);
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(156, 35);
-            this.BtnClear.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnClear.TabIndex = 16;
-            this.BtnClear.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnClear.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnClear.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBack.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnBack.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnBack.ButtonImage")));
-            this.BtnBack.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnBack.ButtonText = "Back";
-            this.BtnBack.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnBack.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnBack.CornerRadius = 5;
-            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBack.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnBack.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnBack.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnBack.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnBack.Location = new System.Drawing.Point(1090, 579);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(156, 35);
-            this.BtnBack.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnBack.TabIndex = 17;
-            this.BtnBack.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnBack.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnBack.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // LblTotalRecs
-            // 
-            this.LblTotalRecs.AutoSize = true;
-            this.LblTotalRecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalRecs.ForeColor = System.Drawing.Color.White;
-            this.LblTotalRecs.Location = new System.Drawing.Point(360, 577);
-            this.LblTotalRecs.Margin = new System.Windows.Forms.Padding(20, 10, 3, 0);
-            this.LblTotalRecs.Name = "LblTotalRecs";
-            this.LblTotalRecs.Size = new System.Drawing.Size(114, 16);
-            this.LblTotalRecs.TabIndex = 7;
-            this.LblTotalRecs.Text = "Total Record(s): 0";
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 36.93885F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Fullname
-            // 
-            this.Fullname.FillWeight = 82.20373F;
-            this.Fullname.HeaderText = "Fullname";
-            this.Fullname.Name = "Fullname";
-            // 
-            // Birthdate
-            // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Birthdate.FillWeight = 78.38728F;
-            this.Birthdate.HeaderText = "Birthdate";
-            this.Birthdate.Name = "Birthdate";
-            // 
-            // Gender
-            // 
-            this.Gender.FillWeight = 56.67597F;
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            // 
-            // Address
-            // 
-            this.Address.FillWeight = 116.8864F;
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            // 
-            // ContactNum
-            // 
-            this.ContactNum.FillWeight = 101.5229F;
-            this.ContactNum.HeaderText = "Contact Number";
-            this.ContactNum.Name = "ContactNum";
-            // 
-            // EmailAddress
-            // 
-            this.EmailAddress.FillWeight = 147.2571F;
-            this.EmailAddress.HeaderText = "EmailAddress";
-            this.EmailAddress.Name = "EmailAddress";
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            // 
             // FormStaffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 630);
+            this.ClientSize = new System.Drawing.Size(1258, 699);
             this.Controls.Add(this.PnlStaffs);
             this.Name = "FormStaffs";
             this.Text = "FormStaffs";
             ((System.ComponentModel.ISupportInitialize)(this.GridStaffs)).EndInit();
             this.PnlStaffs.ResumeLayout(false);
             this.PnlStaffs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,7 +634,7 @@
 
         private ReaLTaiizor.Controls.ParrotButton BtnDelete;
         private ReaLTaiizor.Controls.ParrotButton BtnUpdate;
-        private ReaLTaiizor.Controls.ParrotButton BtnSearch;
+        private ReaLTaiizor.Controls.ParrotButton BtnCancel;
         private System.Windows.Forms.TextBox TbFullnameSearch;
         private System.Windows.Forms.DataGridView GridStaffs;
         private System.Windows.Forms.ComboBox CmbStaffGender;
@@ -612,6 +661,9 @@
         private ReaLTaiizor.Controls.ParrotButton BtnClear;
         private ReaLTaiizor.Controls.ParrotButton BtnBack;
         private System.Windows.Forms.Label LblTotalRecs;
+        private System.Windows.Forms.PictureBox PicLogo;
+        private System.Windows.Forms.TextBox TbConfirmPassword;
+        private System.Windows.Forms.Label LblConfirmPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
@@ -620,6 +672,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }

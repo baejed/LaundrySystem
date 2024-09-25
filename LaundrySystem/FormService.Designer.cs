@@ -436,14 +436,15 @@
             this.BtnFinalizeOrder.Text = "Finalize Laundry";
             this.BtnFinalizeOrder.UseVisualStyleBackColor = true;
             // 
-            // ServiceForm
+            // FormService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 619);
             this.Controls.Add(this.PnlService);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ServiceForm";
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Name = "FormService";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Laundry System";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

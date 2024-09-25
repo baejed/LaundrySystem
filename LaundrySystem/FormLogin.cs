@@ -28,6 +28,21 @@ namespace LaundrySystem
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+
+        private void TbUsername_TextChanged(object sender, EventArgs e)
+        {
+            this.v_username = this.TbUsername.Text;
+        }
+
+        private void TbPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.v_password = this.TbPassword.Text;
+        }
+
+        private void Login()
+        {
             try
             {
                 MySqlCommand gProcCmd = globalProcedure.sqlCommand;
@@ -45,12 +60,14 @@ namespace LaundrySystem
                 this.globalProcedure.sqlLaundryAdapter.Fill(this.globalProcedure.datLaundry);
 
                 DataTable dataTable = globalProcedure.datLaundry;
-                if(int.Parse(dataTable.Rows[0]["validaccounts"].ToString()) > 0)
+                if (int.Parse(dataTable.Rows[0]["validaccounts"].ToString()) > 0)
                 {
                     this.globalProcedure.sqlLaundryAdapter.Dispose();
                     this.globalProcedure.datLaundry.Dispose();
                     this.Hide();
+                    ClearFields();
                     new FormDashboard().ShowDialog();
+                    this.Show();
                 }
                 else
                 {
@@ -86,14 +103,20 @@ namespace LaundrySystem
             }
         }
 
-        private void TbUsername_TextChanged(object sender, EventArgs e)
+        private void TbPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            this.v_username = this.TbUsername.Text;
+            if(e.KeyCode == Keys.Enter)
+            {
+                Login();
+            }
         }
 
-        private void TbPassword_TextChanged(object sender, EventArgs e)
+        private void ClearFields()
         {
-            this.v_password = this.TbPassword.Text;
+            this.TbPassword.Text = string.Empty;
+            this.TbUsername.Text = string.Empty;
+            this.v_username = "";
+            this.v_password = "";
         }
     }
 }

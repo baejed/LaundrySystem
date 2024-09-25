@@ -33,6 +33,9 @@
             this.BtnLaundry = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnCustomers = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnStaff = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnLogout = new ReaLTaiizor.Controls.ParrotButton();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnService
@@ -50,7 +53,7 @@
             this.BtnService.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnService.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnService.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnService.Location = new System.Drawing.Point(12, 131);
+            this.BtnService.Location = new System.Drawing.Point(12, 165);
             this.BtnService.Name = "BtnService";
             this.BtnService.Size = new System.Drawing.Size(344, 50);
             this.BtnService.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -75,7 +78,7 @@
             this.BtnLaundry.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnLaundry.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnLaundry.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnLaundry.Location = new System.Drawing.Point(12, 187);
+            this.BtnLaundry.Location = new System.Drawing.Point(12, 221);
             this.BtnLaundry.Name = "BtnLaundry";
             this.BtnLaundry.Size = new System.Drawing.Size(344, 50);
             this.BtnLaundry.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -100,7 +103,7 @@
             this.BtnCustomers.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnCustomers.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnCustomers.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnCustomers.Location = new System.Drawing.Point(12, 243);
+            this.BtnCustomers.Location = new System.Drawing.Point(12, 277);
             this.BtnCustomers.Name = "BtnCustomers";
             this.BtnCustomers.Size = new System.Drawing.Size(344, 50);
             this.BtnCustomers.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -125,7 +128,7 @@
             this.BtnStaff.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.BtnStaff.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.BtnStaff.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnStaff.Location = new System.Drawing.Point(12, 299);
+            this.BtnStaff.Location = new System.Drawing.Point(12, 333);
             this.BtnStaff.Name = "BtnStaff";
             this.BtnStaff.Size = new System.Drawing.Size(344, 50);
             this.BtnStaff.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -135,18 +138,57 @@
             this.BtnStaff.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.BtnStaff.Click += new System.EventHandler(this.BtnStaff_Click);
             // 
+            // BtnLogout
+            // 
+            this.BtnLogout.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BtnLogout.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnLogout.ButtonImage")));
+            this.BtnLogout.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnLogout.ButtonText = "LOG OUT";
+            this.BtnLogout.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnLogout.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnLogout.CornerRadius = 5;
+            this.BtnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnLogout.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnLogout.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnLogout.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnLogout.Location = new System.Drawing.Point(12, 389);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(344, 50);
+            this.BtnLogout.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnLogout.TabIndex = 0;
+            this.BtnLogout.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnLogout.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnLogout.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // PicLogo
+            // 
+            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Location = new System.Drawing.Point(19, 5);
+            this.PicLogo.Margin = new System.Windows.Forms.Padding(10);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(330, 157);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicLogo.TabIndex = 1;
+            this.PicLogo.TabStop = false;
+            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(368, 450);
+            this.Controls.Add(this.PicLogo);
+            this.Controls.Add(this.BtnLogout);
             this.Controls.Add(this.BtnStaff);
             this.Controls.Add(this.BtnCustomers);
             this.Controls.Add(this.BtnLaundry);
             this.Controls.Add(this.BtnService);
             this.Name = "FormDashboard";
             this.Text = "Laundry System";
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +199,7 @@
         private ReaLTaiizor.Controls.ParrotButton BtnLaundry;
         private ReaLTaiizor.Controls.ParrotButton BtnCustomers;
         private ReaLTaiizor.Controls.ParrotButton BtnStaff;
+        private ReaLTaiizor.Controls.ParrotButton BtnLogout;
+        private System.Windows.Forms.PictureBox PicLogo;
     }
 }

@@ -30,12 +30,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomers));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PnlCustomers = new System.Windows.Forms.Panel();
             this.BtnDelete = new ReaLTaiizor.Controls.ParrotButton();
+            this.BtnClear = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnCancel = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnUpdate = new ReaLTaiizor.Controls.ParrotButton();
             this.BtnBack = new ReaLTaiizor.Controls.ParrotButton();
@@ -68,10 +69,11 @@
             this.LblCustomerName = new System.Windows.Forms.Label();
             this.LblSearch = new System.Windows.Forms.Label();
             this.LblCustomerInfo = new System.Windows.Forms.Label();
-            this.BtnClear = new ReaLTaiizor.Controls.ParrotButton();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.PnlCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlCustomers
@@ -80,6 +82,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlCustomers.BackColor = System.Drawing.Color.DodgerBlue;
+            this.PnlCustomers.Controls.Add(this.PicLogo);
             this.PnlCustomers.Controls.Add(this.BtnDelete);
             this.PnlCustomers.Controls.Add(this.BtnClear);
             this.PnlCustomers.Controls.Add(this.BtnCancel);
@@ -114,7 +117,6 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDelete.BackgroundColor = System.Drawing.Color.Black;
             this.BtnDelete.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnDelete.ButtonImage")));
             this.BtnDelete.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
@@ -139,9 +141,33 @@
             this.BtnDelete.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // BtnClear
+            // 
+            this.BtnClear.BackgroundColor = System.Drawing.Color.Black;
+            this.BtnClear.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnClear.ButtonImage")));
+            this.BtnClear.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.BtnClear.ButtonText = "Clear";
+            this.BtnClear.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.BtnClear.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.CornerRadius = 5;
+            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnClear.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.BtnClear.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.BtnClear.Location = new System.Drawing.Point(16, 434);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(179, 35);
+            this.BtnClear.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.BtnClear.TabIndex = 12;
+            this.BtnClear.TextColor = System.Drawing.Color.DodgerBlue;
+            this.BtnClear.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.BtnClear.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // BtnCancel
             // 
-            this.BtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCancel.BackgroundColor = System.Drawing.Color.Black;
             this.BtnCancel.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ButtonImage")));
             this.BtnCancel.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
@@ -167,7 +193,6 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnUpdate.BackgroundColor = System.Drawing.Color.Black;
             this.BtnUpdate.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ButtonImage")));
             this.BtnUpdate.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
@@ -235,8 +260,8 @@
             this.GridCustomers.AllowUserToDeleteRows = false;
             this.GridCustomers.AllowUserToOrderColumns = true;
             this.GridCustomers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.NullValue = null;
-            this.GridCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.NullValue = null;
+            this.GridCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.GridCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,8 +290,8 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle5.NullValue = null;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.NullValue = null;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
             this.ID.FillWeight = 36.93885F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
@@ -281,8 +306,8 @@
             // 
             // Birthdate
             // 
-            dataGridViewCellStyle6.NullValue = null;
-            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.NullValue = null;
+            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle3;
             this.Birthdate.FillWeight = 78.38728F;
             this.Birthdate.HeaderText = "Birthdate";
             this.Birthdate.Name = "Birthdate";
@@ -561,31 +586,17 @@
             this.LblCustomerInfo.TabIndex = 8;
             this.LblCustomerInfo.Text = "Customer Info (New Customer)";
             // 
-            // BtnClear
+            // PicLogo
             // 
-            this.BtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnClear.BackgroundColor = System.Drawing.Color.Black;
-            this.BtnClear.ButtonImage = ((System.Drawing.Image)(resources.GetObject("BtnClear.ButtonImage")));
-            this.BtnClear.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            this.BtnClear.ButtonText = "Clear";
-            this.BtnClear.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.BtnClear.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnClear.CornerRadius = 5;
-            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClear.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnClear.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.BtnClear.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnClear.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.BtnClear.Location = new System.Drawing.Point(16, 434);
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(179, 35);
-            this.BtnClear.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.BtnClear.TabIndex = 12;
-            this.BtnClear.TextColor = System.Drawing.Color.DodgerBlue;
-            this.BtnClear.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.BtnClear.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            this.PicLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Location = new System.Drawing.Point(1122, 10);
+            this.PicLogo.Margin = new System.Windows.Forms.Padding(10);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(68, 61);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicLogo.TabIndex = 14;
+            this.PicLogo.TabStop = false;
             // 
             // FormCustomers
             // 
@@ -599,6 +610,7 @@
             this.PnlCustomers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -647,5 +659,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImageLoc;
         private ReaLTaiizor.Controls.ParrotButton BtnClear;
+        private System.Windows.Forms.PictureBox PicLogo;
     }
 }
